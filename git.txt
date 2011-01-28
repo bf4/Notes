@@ -1,0 +1,13 @@
+submodules
+
+Setting up
+* git clone --recursive git://repo/repo.git clones the repository and initializes and installs all submodules, but doesn't work on older
+* so, after cloning git://repo/repo.git run "git submodule update --init"
+
+Adding
+
+* "git submodule add git://repot/subrepo.git ./vendor/plugins/subrepo"
+
+Removing
+
+* edit .gitmodules to remove the desired submodule. then "git rm --cached /path/to/repo" to get it out of the git history. This is important!

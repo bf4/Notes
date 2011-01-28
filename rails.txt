@@ -1,0 +1,3 @@
+namespacing
+
+* don't name a model "Task", else you may get an inheritance error from "Rake::Task:Class"
