@@ -1,0 +1,39 @@
+OSX
+
+* XCode: http://developer.apple.com/technology/xcode.html
+* homebrew: https://github.com/mxcl/homebrew
+  @ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"@
+* brew install git
+* brew install mysql
+* Install RVM
+  @bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )@
+  @rvm install ruby-1.8.7-p174@
+* @mkdir $USER/workspace; cd $USER/workspace; rvm gemset create workspace; rvm use 1.8.7-p174@workspace --default; gem install bundler@
+* rvmsudo passenger-install-apache2-module
+* brew install mysql
+* mysql_install_db
+* mkdir /Users/$USER/Library/LaunchAgents
+* e.g. cp /usr/local/Cellar/mysql/5.0.34/com.mysql.mysqld.plist /Users/$USER/Library/LaunchAgents
+* launchctl load -w /Users/$USER/Library/LaunchAgents/com.mysql.mysqld.plist
+* sudo chown -R mysql:mysql /usr/local/Cellar/mysql/
+* sudo chown -R mysql:mysql /usr/local/var/mysql
+* ln -s /usr/local/Cellar/mysql/5.0.34 /usr/local/mysql
+
+
+Upgrading Leopard to Snow Leopard
+
+Before upgrade
+
+* cd brew --prefix
+* rm -rf Cellar
+* brew prune
+* rm -rf Library .git .gitignore bin/brew README.md
+
+OR
+
+* sudo mv /usr/local /Users/$USER/localold32bit; sudo mkdir /usr/local; mv /Users/$USER/.rvm /Users/$USER/.rvmold32bit
+
+* RVM
+See http://sirupsen.com/get-started-right-with-rvm/
+
+* rvm --create --rvmrc 1.9.2@project

@@ -1,0 +1,9 @@
+* Ack: @brew install ack@. Great for doing a full text search in a folder and subfolders.  Can be config'd to certain file types, etc.
+* MacVim: @brew install macvim@ or download it. Is good for copying and pasting. Check .vimrc dotfiles
+* TextMate and bundles or "Redcar":https://github.com/redcar/redcar
+* Install Sequel Pro for DB browsing: http://www.sequelpro.com/ (for some machines you may need to use the ssh option)
+* "Fluid":http://fluidapp.com/ is useful for creating single web site convenience apps
+* Adium
+* Standalone "IE Super Preview 6,7,8":http://www.microsoft.com/downloads/en/details.aspx?FamilyID=8e6ac106-525d-45d0-84db-dccff3fae677&displaylang=en
+* OSX Finder "droplet to open current folder in terminal":http://cdto.googlecode.com/
+* "Time Tracker":http://www.codehackers.net/timecard/Stone%20Hill%20Time%20Card.zip

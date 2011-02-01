@@ -1,0 +1,3 @@
+MySQL
+
+* echo "CREATE DATABASE db_name DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; GRANT ALL ON db_name.* TO 'db_user'@'localhost' IDENTIFIED BY 'db_password'; FLUSH PRIVILEGES;" | mysql -u root -p

@@ -1,0 +1,25 @@
+* "CouchDB":http://guide.couchdb.org/
+*  "ProGit":http://progit.org/book
+* "Rails 2.3.8":http://guides.rubyonrails.org/v2.3.8/
+* "Rails 3.0":http://guides.rubyonrails.org/ (and "hackfest":http://hackfest.rubyonrails.org/ )
+* "Dive into HTML5":http://diveintohtml5.org/
+* "Building iPhone Apps with HTML, CSS, and JavaScript":http://ofps.oreilly.com/titles/9780596805784/
+* "MacRuby: The Definitive Guide":http://ofps.oreilly.com/titles/9781449380373/
+* "Building Android Apps with HTML, CSS, and JavaScript":http://ofps.oreilly.com/titles/9781449383268/
+* "Programming Scala":http://programming-scala.labs.oreilly.com/
+* "DocBook":http://www.docbook.org/tdg5/en/html/docbook.html
+* "HTML Ref":http://htmlref.labs.oreilly.com/beta
+* "Rails 3 in a Nutshell":http://rails-nutshell.labs.oreilly.com/
+* "Programming Android":http://programming-android.labs.oreilly.com/index.html
+* "iPhone 3D":http://iphone-3d-programming.labs.oreilly.com/
+* "More":http://www.onlinecomputerbooks.com/legal-free-oreilly-books.php , "More":http://stackoverflow.com/questions/194812/list-of-freely-available-programming-books and "Oreilly Search":http://www.google.com/search?&q=You+are+reading+the+text+of+an+O'Reilly+book+that's+under+development.
+
+
+| ruby code to spider a book and convert to pdf | @#!/usr/bin/env ruby@ |
+| spider URL | @URL = 'http://progit.org/book/'@ |
+| download | @system("wget -E --random-wait --wait 10 --convert-links --no-clobber --continue --level=2 --recursive --no-remove-listing --no-parent #{URL}")@ see "wget":http://www.gnu.org/software/wget/manual/wget.html#Relative-Links |
+| to pdf step one | @BASE_DIR = "progit.org/book"@ |
+| collect *.html | @files = Dir.glob("*.html")@ |
+| iterate through starting with @index.html@ | @files.unshift(files.delete(files.grep(/index.html/i).first))@ |
+| join pages | @output = files.join(" ")@ |
+| convert to pdf book | @system( "htmldoc --book -f progit.pdf #{output}" )@ |

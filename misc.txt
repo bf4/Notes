@@ -1,0 +1,15 @@
+* OSX open encoded file using ruby 1.9.2
+
+system("file -I encoded_file.txt > enc.txt")
+e = File.open("enc.txt", "r") 
+enc = e.read
+e.close
+enc_match = enc.match(/charset=(.*)$/)
+encoding = enc_match[1]
+
+f = File.open("encoded_file.txt","rb:#{em[1]}")
+my_file = f.read
+f.close
+
+
+my_file.encode("UTF-8", "#{encoding}")
