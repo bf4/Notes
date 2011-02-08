@@ -1,0 +1,19 @@
+git
+
+.gitconfig
+
+# colors in terminal
+git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto
+
+
+* where did the code go bad?
+** git bisect --- you give it a start that's good and an end that's bad, and it goes to the commit halfway in between via binary search.  enter 'git bisect good' if it's good or 'git bisect bad' if it's bad.  It then goes in between the next good and bad commits until it tells you at which commit it has found to have gone bad.  see :http://www.palantir.net/blog/using-git-bisect-fun-and-profit
+
+.e.g
+1) git bisect start #start the process from the HEAD of the branch
+2) git bisect bad #we're starting out and it's bad
+3) git bisect good "commit-id" #we know it was good at this commit hash
+4) # it'll take you to a commit in the middle and you tell it 'git bisect good' or 'git bisect bad', take you to the middle of the next good and bad. iterate this one till done
+5) 'git bisect reset' #when you found the bug and noted the commit. It then takes you back to HEAD
