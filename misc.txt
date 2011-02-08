@@ -7,9 +7,13 @@ e.close
 enc_match = enc.match(/charset=(.*)$/)
 encoding = enc_match[1]
 
-f = File.open("encoded_file.txt","rb:#{em[1]}")
+f = File.open("encoded_file.txt","rb:#{encoding}")
 my_file = f.read
 f.close
 
 
 my_file.encode("UTF-8", "#{encoding}")
+
+* What's running on port 5984?
+** lsof -i -P | grep 5984
+** ps aux | grep $pid #where pid is the process id from the previous output

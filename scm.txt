@@ -9,7 +9,7 @@ git config --global color.branch auto
 
 
 * where did the code go bad?
-** git bisect --- you give it a start that's good and an end that's bad, and it goes to the commit halfway in between via binary search.  enter 'git bisect good' if it's good or 'git bisect bad' if it's bad.  It then goes in between the next good and bad commits until it tells you at which commit it has found to have gone bad.  see :http://www.palantir.net/blog/using-git-bisect-fun-and-profit
+** git bisect --- you give it a start that's good and an end that's bad, and it goes to the commit halfway in between via binary search.  enter 'git bisect good' if it's good or 'git bisect bad' if it's bad.  It then goes in between the next good and bad commits until it tells you at which commit it has found to have gone bad.  see :http://www.palantir.net/blog/using-git-bisect-fun-and-profit and http://lwn.net/Articles/317154/ (for how to automate it)
 
 .e.g
 1) git bisect start #start the process from the HEAD of the branch
