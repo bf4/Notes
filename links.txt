@@ -1,0 +1,209 @@
+#regex #ruby
+http://pleac.sourceforge.net/pleac_ruby/patternmatching.html
+
+#powerpoint
+STEAL THIS PRESENTATION!::http://www.slideshare.net/GlobalGossip/steal-this-presentation-5038209
+
+#unsorted
+
+#cooking
+A Tale of Two Tarts::http://www.godecookery.com/twotarts/twotarts.html
+
+#copyright
+Illadore's House o Crack - Copyright Infringement and Me::http://illadore.livejournal.com/30674.html
+
+All Our Ideas - A Suggestion Box for the Digital Age::http://www.allourideas.org/
+Freedom to Tinker | Hosted by Princeton's Center for Information Technology Policy::http://freedom-to-tinker.com/
+
+# boot dvd that combines antivirus utilites linux and rescue cd's
+Antivirus - Shardana Antivirus Rescue Disk Utility::http://www.sarducd.it/antivirus.html
+
+Neighborhood Boundaries - Demo - Maponics::http://www.maponics.com/products/gis-data/neighborhood-boundaries/demo/
+
+Wireframing: Tips, Tools, and Techniques (Pt 1) | UX Booth::http://www.uxbooth.com/blog/wireframing-tips-tools-and-techniques/
+
+Site Directory - Google Code::http://code.google.com/more/
+
+PubSubHubbub - Google Code::http://code.google.com/apis/pubsubhubbub/
+
+Google PowerMeter API - Google Code::http://code.google.com/apis/powermeter/
+
+The Google Geocoding API - Google Maps API Web Services - Google Code::http://code.google.com/apis/maps/documentation/geocoding/
+
+Google Moderator API - Google Code::http://code.google.com/apis/moderator/
+
+Google Apps Script - Google Code::http://code.google.com/googleapps/appsscript/
+
+Google Code Playground::http://code.google.com/apis/ajax/playground/#retrieve_events
+
+Authentication and Authorization for Google APIs - Google Code::http://code.google.com/apis/accounts/
+
+The Case of the Slooooow System - Mark's Blog - Site Home - TechNet Blogs::http://blogs.technet.com/b/markrussinovich/archive/2008/09/24/3126858.aspx
+
+Google Talk::http://talkgadget.google.com/talkgadget/popout
+
+boycott-riaa.com - Article: Inside the Sony BMG Rootkit Spyware Scandal::http://www.boycott-riaa.com/article/20244
+
+Code Search::http://www.google.com/codesearch
+
+
+Google Apps Marketplace - OffiServ::https://www.google.com/enterprise/marketplace/viewListing?productListingId=5840+16668439750739307030
+
+Google Apps Marketplace - Rainmaker: Social CRM for Google Apps::https://www.google.com/enterprise/marketplace/viewListing?productListingId=3526+949780626376808890#utm_campaign=apptuesday&amp
+
+Google Apps Marketplace - Insync. Google Docs on your desktop.::https://www.google.com/enterprise/marketplace/viewListing?productListingId=4017+2680451470992863514
+
+Google Apps Marketplace - Elance - Hire and Manage Online::https://www.google.com/enterprise/marketplace/viewListing?productListingId=6445+9442017978424625048
+
+The GCal4Ruby Network - GitHub::http://github.com/mjreich/GCal4Ruby/network
+
+tsenying's gdata-ruby-util at master - GitHub::http://github.com/tsenying/gdata-ruby-util
+
+intridea's omniauth at master - GitHub::http://github.com/intridea/omniauth
+
+Insoshi::http://dogfood.insoshi.com/
+
+Loud Thinking: October 2006::http://www.loudthinking.com/arc/2006_10.html
+
+Google Related Links - Overview::http://relatedlinks.googlelabs.com/
+
+Script Converter::http://scriptconv.googlelabs.com/
+
+- Breadcrumb::http://breadcrumb.googlelabs.com/
+
+Google Scribe::http://scribe.googlelabs.com/
+
+Type in Hindi - Google Transliteration::http://www.google.com/transliterate/
+
+Google Image Swirl::http://image-swirl.googlelabs.com/
+
+Google ÿ™ÿ¥ŸÉŸäŸÑ::http://tashkeel.googlelabs.com/
+
+Google Reader - Play::http://www.google.com/reader/play/#item/new/2
+
+Google Fusion Tables::http://www.google.com/fusiontables/Home
+
+People Hopper::http://people-hopper.googlelabs.com/
+
+Zend Server CE Downloads - Zend.com::http://www.zend.com/en/products/server-ce/downloads
+
+Google Scribe::http://scribe.googlelabs.com/
+
+Download FMenu for Mac - Menubar item provides Growl notifications of Facebook events. MacUpdate Mac Software Downloads::http://www.macupdate.com/info.php/id/23967/fmenu
+
+Download MUMenu for Mac - Menu item displays latest MacUpdate releases in pull down menu. MacUpdate Mac Software Downloads::http://www.macupdate.com/info.php/id/8277/mumenu
+
+Browse Hallon Files on SourceForge.net::http://sourceforge.net/projects/hallon/files/
+
+super OS X menubar items - URLwell::http://menu.jeweledplatypus.org/urlwell.html
+
+Alarm Clock 2 by Robbie Hanson::http://www.robbiehanson.com/alarmclock/
+
+Meteorologist - a weather program for Mac OS X::http://heat-meteo.sourceforge.net/
+
+Mac Weather Software from WeatherBug.com::http://weather.weatherbug.com/desktop-weather/weatherbug-mac.html
+
+Jeb-Soft: Ejector::http://www.jeb.com.fr/en/ejector.shtml
+
+Arizona Software - Developer Resources::http://www.arizona-software.ch/developer/idiskmenu.html
+
+Lab Tick::http://labtick.proculo.de/
+
+SSHKeychain - About::http://sshkeychain.sourceforge.net/
+
+Raging Menace - MenuMeters::http://www.ragingmenace.com/software/menumeters/
+
+Solving the Rubik's Cube::http://web.mit.edu/eranki/www/tutorials/cube/
+
+WatchOCR::http://www.watchocr.com/
+
+TurnFlash v2.10 (User Interface Version) - Enable/Disable Flash in Internet Explorer::http://www.nirsoft.net/utils/tflash2.html
+
+How to Stop GIF Image Animations from Playing in IE or Firefox - Digital Inspiration::http://labnol.blogspot.com/2007/08/how-to-stop-gif-image-animations-from.html
+
+relix's iCal2GCal at master - GitHub::http://github.com/relix/iCal2GCal
+
+pauldix's feedzirra at master - GitHub::http://github.com/pauldix/feedzirra
+
+veedles's ical-merger at master - GitHub::http://github.com/veedles/ical-merger
+
+pomodairo-1.7.air - pomodairo - Pomodairo v1.7 - Project Hosting on Google Code::http://code.google.com/p/pomodairo/downloads/detail?name=pomodairo-1.7.air
+
+
+Sedo - The world's leading domain marketplace¬†-¬†Sedo.com::http://sedo.com/us/home/getting-started/
+
+Sound Opinions Footnotes::http://www.soundopinions.org/shownotes/2010/082710/shownotes.html
+
+roo::http://roo.rubyforge.org/
+
+Docs | RubyGems.org | your community gem host::http://rubygems.org/pages/docs
+
+GitHub RubyGems::http://gems.github.com/list.html
+
+Wiki Apps in The Ruby Toolbox::http://ruby-toolbox.com/categories/wiki_apps.html
+
+Text Editors in Ruby in The Ruby Toolbox::http://ruby-toolbox.com/categories/text_editors_in_ruby.html
+
+Social Network Builders in The Ruby Toolbox::http://ruby-toolbox.com/categories/social_networking.html
+
+Server Monitoring in The Ruby Toolbox::http://ruby-toolbox.com/categories/server_monitoring.html
+
+RSS Feed Parsing in The Ruby Toolbox::http://ruby-toolbox.com/categories/rss_feed_parsing.html
+
+Scheduling in The Ruby Toolbox::http://ruby-toolbox.com/categories/scheduling.html
+
+Recurring Events in The Ruby Toolbox::http://ruby-toolbox.com/categories/recurring_events.html
+
+teambox's teambox at master - GitHub::http://github.com/teambox/teambox
+
+Project Management in The Ruby Toolbox::http://ruby-toolbox.com/categories/project_management.html
+
+The Ruby Toolbox - Know your options!::http://ruby-toolbox.com/
+
+heyzap-contacts | RubyGems.org | your community gem host::http://rubygems.org/gems/heyzap-contacts
+
+memories | RubyGems.org | your community gem host::http://rubygems.org/gems/memories
+
+sinatra_auth_gmail | RubyGems.org | your community gem host::http://rubygems.org/gems/sinatra_auth_gmail
+
+glennfu-contacts | RubyGems.org | your community gem host::http://rubygems.org/gems/glennfu-contacts
+
+contact_csv | RubyGems.org | your community gem host::http://rubygems.org/gems/contact_csv
+
+contactlist-client | RubyGems.org | your community gem host::http://rubygems.org/gems/contactlist-client
+
+adamhunter-contacts | RubyGems.org | your community gem host::http://rubygems.org/gems/adamhunter-contacts
+
+SparkleShare - Sharing work made easy::http://sparkleshare.org/
+
+gmail_contacts | RubyGems.org | your community gem host::http://rubygems.org/gems/gmail_contacts
+
+ruby-gmail | RubyGems.org | your community gem host::http://rubygems.org/gems/ruby-gmail
+
+RubyForge: Earworm: Project Info::http://rubyforge.org/projects/earworm
+
+Is Unit Testing worth the effort? - Stack Overflow::http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort/69263#69263
+
+Piled Higher and Deeper::http://www.phdcomics.com/
+
+Edgar of all trades::http://edgargarcia.com/
+
+Felicia Day ¬ª Blog Archive ¬ª Women in Tech::http://feliciaday.com/blog/women-in-tech
+
+Talentopoly - Be Found.::http://www.talentopoly.com/resumes
+
+(1) MetaDanFeed (MetaDanFeed) on Twitter::http://twitter.com/#!/MetaDanFeed
+
+Jobs In Tech (jobsintech) on Twitter::http://twitter.com/#!/jobsintech
+
+With a Little Help From His Friends | Culture | Vanity Fair::http://www.vanityfair.com/culture/features/2010/10/sean-parker-201010
+
+MySQL :: MySQL 5.1 Reference Manual :: 11.17.5.2 Geometry Functions::http://dev.mysql.com/doc/refman/5.1/en/geometry-property-functions.html#function_envelope
+
+MySQL :: MySQL 5.1 Reference Manual :: 11.17.5.3 Functions That Create New Geometries from Existing Ones::http://dev.mysql.com/doc/refman/5.1/en/functions-that-create-new-geometries-from-existing-ones.html
+
+Git_Guide - SourceMage Wiki::http://www.sourcemage.org/Git_Guide#I_have_totally_screwed_up_my_repository_with_a_broken_merge
+
+example.rb at master from glv's calfilter - GitHub::http://github.com/glv/calfilter/blob/master/example.rb
+
+Unhappy Hipsters::http://unhappyhipsters.com/

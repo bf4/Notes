@@ -1,0 +1,2 @@
+# find links in a text, adapted from http://pleac.sourceforge.net/pleac_ruby/patternmatching.html
+links_match = text.scan(%r/<A[^>]+?HREF\s*=\s*["']?([^'" >]+?)[ '"]?>(.*?)<\/a>/mi)
