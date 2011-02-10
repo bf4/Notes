@@ -4,6 +4,16 @@ http://pleac.sourceforge.net/pleac_ruby/patternmatching.html
 #powerpoint
 STEAL THIS PRESENTATION!::http://www.slideshare.net/GlobalGossip/steal-this-presentation-5038209
 
+#google #wedding
+More “I do”s, less “to-do”s: wedding planning simplified::http://googleblog.blogspot.com/2011/02/more-i-dos-less-to-dos-wedding-planning.html  http://www.google.com/weddings/
+
+#github #trends #sinatra
+github-trends:: https://github.com/oscardelben/github-trends (now just need to add the ability to track yourself! -BF)
+
+#37signals campfire #uploads
+http://metaskills.net/2010/08/19/how-to-clean-a-campfire-room-of-uploads/
+#37signals campfire #export  git://gist.github.com/821553.git
+
 #unsorted
 
 #cooking
