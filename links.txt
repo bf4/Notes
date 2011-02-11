@@ -12,7 +12,7 @@ github-trends:: https://github.com/oscardelben/github-trends (now just need to a
 
 #37signals campfire #uploads
 http://metaskills.net/2010/08/19/how-to-clean-a-campfire-room-of-uploads/
-#37signals campfire #export  git://gist.github.com/821553.git
+#37signals campfire #export  http://gist.github.com/821553
 
 #unsorted
 
