@@ -14,6 +14,30 @@ github-trends:: https://github.com/oscardelben/github-trends (now just need to a
 http://metaskills.net/2010/08/19/how-to-clean-a-campfire-room-of-uploads/
 #37signals campfire #export  http://gist.github.com/821553
 
+#metrics and code churn
+Corey haines gist https://gist.github.com/829932/
+Michael Feathers talk http://www.stickyminds.com/sitewide.asp?Function=edetail&ObjectType=COL&ObjectId=16679&tth=DYN&tt=siteemail&iDyn=2
+-- Using software http://www.campwoodsw.com/sourcemonitor.html
+
+* making net/http secure
+** http://www.rubyinside.com/how-to-cure-nethttps-risky-default-https-behavior-4010.html and http://jamesgolick.com/2011/2/15/verify-none..html
+
+#management #geeks
+* http://www.computerworld.com/s/article/9137708/Opinion_The_unspoken_truth_about_managing_geeks
+
+#lists
+* japanese to english mri ruby dev list https://github.com/yhara/dev-ruby
+
+Thought leaders
+* Laurent Bossavit http://bossavit.com/thoughts/ http://twitter.com/Morendil
+* Michael Feathers http://michaelfeathers.typepad.com/ http://twitter.com/mfeathers
+
+#Agile #design
+Making sense of agile design principles http://prezi.com/yuirqsqxl7cd/making-sense-of-agile-design-practices/ and http://www.agilis.is/uploads/5/2/9/3/5293637/makingsenseofagiledesign.pdf
+Writing code for other people: cognitive psychology and the fundamentals of good software design principles http://portal.acm.org/citation.cfm?id=1640089.1640126&coll=ACM&dl=ACM&type=series&idx=SERIES318&part=series&WantType=Proceedings&title=OOPSLA&preflayout=flat
+
+related to psychology of programming? http://www.ppig.org/
+
 #unsorted
 
 #cooking

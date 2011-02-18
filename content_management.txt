@@ -1,0 +1,15 @@
+#github pages jekyll blog
+http://pages.github.com/
+https://github.com/blog/272-github-pages
+https://github.com/blog/315-cname-support-for-github-pages
+http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/
+https://github.com/fons/cl-bliky
+
+
+
+# vanilla soup bliki wiki
+https://github.com/lazyatom/interblah.net
+
+#bliki wiki
+https://github.com/kzn/bliki
+https://github.com/ngocdaothanh/openkh

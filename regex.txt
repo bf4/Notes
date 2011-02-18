@@ -1,2 +1,8 @@
 # find links in a text, adapted from http://pleac.sourceforge.net/pleac_ruby/patternmatching.html
 links_match = text.scan(%r/<A[^>]+?HREF\s*=\s*["']?([^'" >]+?)[ '"]?>(.*?)<\/a>/mi)
+
+# find sql times in rails output, read in as "wholelog"
+result = wholelog.scan(%r/^(.*?)\((.*?ms)\)/)
+File.open("times.csv", "w") do |file|
+  result.each {|line| file.write("#{line[0].strip}, #{line[1].gsub(/ms/, '')}\r\n")}
+end
