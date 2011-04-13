@@ -1,0 +1,32 @@
+* Chrome js loader https://github.com/defunkt/dotjs
+* Lazy load js https://github.com/chriso/load.js
+* command line jquery https://github.com/visionmedia/query
+
+* https://github.com/svenfuchs/travis http://travis-ci.org/ #resque redis jasmine rails3 ci websockets pusher heroku
+
+* https://github.com/lazyatom/vanilla-rb #soup / git base blog engine
+
+#it's like meetup or is meetup see https://github.com/meetup
+## alternative
+* https://github.com/aclemmer/Campus-Meetup fresh php
+* https://github.com/mifo/Meetr rails3 presentation conference
+* voting app https://github.com/emmapersky/GGM-Voting
+* https://github.com/jdpace/hubbub based on it rails, cms, oauth, integrates with meetup.com, blog, twitter, github, 
+* https://github.com/idangazit/discourse python, free replacement
+
+#mashup
+* https://github.com/zain/lumpydonuts searchable updatable map
+
+#sync
+* https://github.com/carlzulauf/CalendarSyncer google meetup.com php
+* https://github.com/meetup/utilities data import python java
+
+# api
+* https://github.com/kfaustino/meetup ruby
+* https://github.com/meetup/python-api-client python
+* https://github.com/wizonesolutions/meetup_api php 
+
+#sample
+* https://github.com/meetup/javascript-apps javascript 
+
+* sinatra ppt and stuff https://github.com/techwhizbang/sinatra_slideshow

@@ -1,0 +1,37 @@
+* unbounded queries are too easy http://obtiva.com/blog/141-know-your-tools-activerecord-collections
+
+#jquery ajax
+* http://www.chadfowler.com/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011
+
+#churn
+* http://michaelfeathers.typepad.com/michael_feathers_blog/design_testing/ http://www.campwoodsw.com/sourcemonitor.html
+
+# Php
+* http://najafali.com/php-is-better-than-ruby.html
+
+
+****MUST READ****
+* ruby kata unit testing http://www.skorks.com/2011/02/a-unit-testing-framework-in-44-lines-of-ruby/ via http://twitter.com/mfeathers/statuses/40071182585835520
+
+functional programming http://www.codefixes.com/2010/11/cpu-speeds-have-maxed-out-now-what/ http://www.codefixes.com/2010/11/think-functional-immutable-types-and-idempotence/
+
+* Agile at 10 years http://www.pragprog.com/magazines/2011-02/agile--
+
+
+
+
+
+* startup survival guide http://www.codefixes.com/2010/11/coders-survival-guide-to-startup-weekend/
+* rails api sucks http://www.codefixes.com/2010/11/maybe-your-api-sucks/
+
+http://chicago.startupweekend.org/ http://startupweekend.org/resources/  http://www.eventbrite.com/org/281778740?s=2280721 http://www.eventbrite.com/org/281778740?s=2280721 ical
+
+* project management alternative to pivotal tracker http://pbworks.com/
+
+* business plan competitions http://istart.org/
+
+* business funding http://www.fundinguniverse.com/
+
+* wireframe http://iplotz.com/
+
+* https://bitbucket.org/markglenn

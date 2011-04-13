@@ -1,2 +1,8 @@
 * diff -rq folder1 folder2 (for brief output of just the file)
 * diff -r folder1 folder2 > fold.diff (to save the actual differences)
+
+
+CouchDB
+** curl -O -X will save the output to file
+* Get info on the design document 'test' in the database 'databasename' curl -X GET http://localhost:5984/databasename/_design/test/_info
+* Get the json from the design document 'test' in the database 'databasename' with the view 'all' curl -X GET http://localhost:5984/databasename/_design/test/all

@@ -1,0 +1,38 @@
+http://www.slate.com/id/2284721/pagenum/all/#p2
+
+IBM has bragged to the media that Watson's question-answering skills are good for more than annoying Alex Trebek. The company sees a future in which fields like medical diagnosis, business analytics, and tech support are automated by question-answering software like Watson. Just as factory jobs were eliminated in the 20th century by new assembly-line robots, Brad and I were the first knowledge-industry workers put out of work by the new generation of "thinking" machines. "Quiz show contestant" may be the first job made redundant by Watson, but I'm sure it won't be the last.
+But there's no shame in losing to silicon, I thought to myself as I greeted the (suddenly friendlier) team of IBM engineers after the match. After all, I don't have 2,880 processor cores and 15 terabytes of reference works at my disposal—nor can I buzz in with perfect timing whenever I know an answer. My puny human brain, just a few bucks worth of water, salts, and proteins, hung in there just fine against a jillion-dollar supercomputer.
+************************************
+
+* using "always_verify_ssl_certificates" I got 
+---- temporarily unavailable: (certificate verify failed) s3.amazon
+with SSL:NO_VERIFY "warning: peer certificate won't be verified in this SSL session" which is due to the default ruby net/http settings. We can ensure SSL certificates are validated by including in the Gemfile. 
+gem 'always_verify_ssl_certificates', :require => 'always_verify_ssl_certificates'
+
+though this will cause failures: "temporarily unavailable: (certificate verify failed)"
+if we don’t also set paperclip and the aws-s3 gem to use ssl. Therefore, in 
+-  AWS::S3::S3Object.url_for(path, bucket_name, :expires_in => time )
++  AWS::S3::S3Object.url_for(path, bucket_name, :expires_in => time, :use_ssl => true )
+
+**************************************
+* cronless rake task scheduling with rufus-scheduler http://kartzontech.blogspot.com/2011/02/no-more-cron-jobs-schedule-jobs-through.html
+
+require 'rufus/scheduler'  # Need this to make use of Rufus::Scheduler
+
+require 'rubygems'   # Need this to make use of any Gem, in our case it is rufus-scheduler
+
+require 'rake'     # Need this to make use of Rake::Task
+
+load File.join(RAILS_ROOT, 'lib', 'tasks', 'tempfile.rake')
+ 'misc.rake' is not required to be loaded if none of your rake tasks that you invoke are dependent on :environment task, directly or indirectly
+# If this file is not loaded, you would see an error message like "Don't know how to build task :environment"
+load File.join('lib', 'tasks', 'misc.rake')
+
+1) to run as part of the schedule process, in a job, define
+task = Rake::Task["tempfile:delete_all"] 
+
+task.reenable  # If only you do this, will your rake task run the next time you invoke it.
+
+task.invoke
+2) to spawn another process, in the job, run a system command
+system "rake tempfile:delete_all RAILS_ENV=#{RAILS.env}"

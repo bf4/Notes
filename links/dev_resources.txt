@@ -1,0 +1,1 @@
+* Nokia QT http://developer.qt.nokia.com/groups

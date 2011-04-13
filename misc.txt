@@ -17,3 +17,5 @@ my_file.encode("UTF-8", "#{encoding}")
 * What's running on port 5984?
 ** lsof -i -P | grep 5984
 ** ps aux | grep $pid #where pid is the process id from the previous output
+
+** rvm install rubygems 1.3.7

@@ -1,3 +1,8 @@
+pruning your local remote branch references
+
+* git remote prune origin      #where origin is the remote name, removes and references your local git repo has to remotes that have since been deleted. i.e. cleans up invalid remote branch references when you run "git branch -r"
+
+
 submodules
 
 Setting up
@@ -11,3 +16,17 @@ Adding
 Removing
 
 * edit .gitmodules to remove the desired submodule. then "git rm --cached /path/to/repo" to get it out of the git history. This is important!
+
+git bisect
+
+http://www.kernel.org/pub/software/scm/git/docs/git-bisect-lk2009.html
+
+where did the code go bad?
+git bisect - you give it a start that’s good and an end that’s bad, and it goes to the commit halfway in between via binary search. enter ‘git bisect good’ if it’s good or ‘git bisect bad’ if it’s bad. It then goes in between the next good and bad commits until it tells you at which commit it has found to have gone bad. see :http://www.palantir.net/blog/using-git-bisect-fun-and-profit and http://lwn.net/Articles/317154/ (for how to automate it)
+.e.g
+git bisect start #start the process from the HEAD of the branch
+git bisect bad #we’re starting out and it’s bad
+git bisect good “commit-id” #we know it was good at this commit hash
+.# it’ll take you to a commit in the middle and you tell it ‘git bisect good’ or ‘git bisect bad’, take you to the middle of the next good and bad. iterate this one till done
+‘git bisect reset’ #when you found the bug and noted the commit. It then takes you back to HEAD
+good luck

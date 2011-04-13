@@ -1,0 +1,9 @@
+general
+# http://getconfed.com
+
+#jasmine #bdd
+http://www.engineyard.com/university/screencasts/javascript-tests-with-jasmine
+--- read http://pivotal.github.com/jasmine/
+
+# *nix ruby
+http://getconfed.com/events/goruco-2009/presentations/the-ruby-guide-to-nix-plumbing
