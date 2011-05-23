@@ -1,0 +1,1 @@
+* trap Ctrl+C for controlled shutdown http://obtiva.com/blog/185-fun-with-ruby-it-s-a-trap

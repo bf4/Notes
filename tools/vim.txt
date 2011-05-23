@@ -1,0 +1,8 @@
+* vim :buffers http://vim.wikia.com/wiki/Vim_buffer_FAQ
+
+habits
+* http://www.moolenaar.net/habits.html
+* http://jmcpherson.org/editing.html
+
+Record and play
+* http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/

@@ -1,0 +1,16 @@
+rsync
+* http://www.mikerubel.org/computers/rsync_snapshots/
+* see http://www.codinghorror.com/blog/2008/01/whats-your-backup-strategy.html
+** sudo rsync -vaxE --delete --ignore-errors / /Volumes/Backup/ # incremental
+Mac
+
+* http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html OSS
+
+Windows
+
+* https://github.com/candera/hobocopy
+* http://www.cockos.com/pathsync/
+
+POSXI
+* http://www.dirvish.org/
+* http://rdiff-backup.stanford.edu/duplicity.html python

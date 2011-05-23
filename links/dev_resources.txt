@@ -1,1 +1,6 @@
 * Nokia QT http://developer.qt.nokia.com/groups
+* https://github.com/napcs/qedserver javascript testing server
+
+
+Shell
+* BDSM https://bdsm.beginrescueend.com/bdsm/install/

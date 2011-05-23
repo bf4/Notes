@@ -1,0 +1,24 @@
+
+
+* 2009-03-18 https://github.com/Pistos/selfmarks
+* 2011-04-17 https://github.com/FarMcKon/gitmarks_2
+* 2010-12-24 https://github.com/initpy/selficious
+* 2010-01-08 https://github.com/alx/pressmark Wordpress
+* 2010-12-28 https://github.com/scronide/scuttle
+**** 2011-04-09 https://github.com/mmb/murlsh rack link blog
+**** 2011-01-10 https://github.com/willmcgugan/Locidesktop django
+* 2011-03-11 https://github.com/citizen428/unsavory remove outdate delicious
+* 2011-04-23 https://github.com/ssp/delimport import pinboard delicious
+* 2011-03-15 https://github.com/samclark/pinboard chrome pinboard extensions
+* 2010-07-30 https://github.com/residuum/Oileide ajax bookmarking
+*** 2011-04-19 https://github.com/Rubunity/Rubunity rubinius community site with snippeting
+* 2011-03-26 https://github.com/symm/pinboard-backup
+* 2010-03-18 https://github.com/DRMacIver/gourmand imports from others into delicious
+* 2011-02-2 https://github.com/rjbs/rubric perl
+* 2009-06-15 https://github.com/philhawksworth/pinboard index cards
+* 2010-11-10 https://github.com/theteam/nodeboard node.js express rebuild pinboard
+* 2010-09-23 https://github.com/sarnowski/pinboard notices based on typesafe
+* 2010-12-28 https://github.com/WIZARDISHUNGRY/opml_tagger auto retag oplm feed
+* 2009-03-24 https://github.com/facebook/bunny1/blob/master/setup.py smart pythong bookmarks
+* 2010-11-26 online bookmark repository https://github.com/LReeves/insipid
+* 2009-03-18 https://github.com/Pistos/selfmarks antisocial ruby bookmarks

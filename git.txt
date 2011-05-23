@@ -30,3 +30,77 @@ git bisect good “commit-id” #we know it was good at this commit hash
 .# it’ll take you to a commit in the middle and you tell it ‘git bisect good’ or ‘git bisect bad’, take you to the middle of the next good and bad. iterate this one till done
 ‘git bisect reset’ #when you found the bug and noted the commit. It then takes you back to HEAD
 good luck
+
+interesting commands-------------
+
+git status -sb
+git notes edit ad9f487
+git describe HEAD@{1.month.ago}
+git name-rev ad9f487 --name-only # for helpful commit name sharing
+git config --global alias.human  "name-rev --name-only --refs=refs/heads/*"
+git config --global alias.humin "name-rev --refs=refs/heads/* --stdin" #takes stdin e.g. git log | git humin
+git log --oneline --decorate --graph 
+
+bundles, sharing commits by email etc.
+* git bundle create repo.bundle master
+* ls -lh repo.bundle
+* git ls-remote repo.bundle
+* git clone repo.bundle -b master repo
+
+-- getting local not yet pushed changes
+* git log --oneline master ^origin/master
+* git bundle create commits.bundle master ^origin/master
+* ls -lh commits.bundle 
+* git fetch ../commits.bundle master:other-master #import it
+* git log --oneline --graph --decorate --all
+
+branch fun
+git branch
+--merged
+--no-merged
+--contains ad9f487
+
+tracking
+* git push -u origin mybranch
+* git config --global push.default #can be matching, nothing, tracking, or current
+
+
+git replacements (have a commit point to another sha1, to separate out history)
+* git branch history master~1
+* git remote add history git@.../project-history.git
+* echo 'get history from... ' > msg
+* cat msg | git commit-tree history~1^{tree}
+* git rebase --onto 622eab 4fjk893
+* git replace adfalj asdflkja;s
+* git cat-file -p 348jkl
+* git --no-replace-references cat-file -p 348jkl
+
+* git for-each-ref
+
+IMPORTANT
+
+* git config --global rerere.enabled 1
+* git merge # resolve, conflict, 
+* git rerere status
+* git rerere diff #shows how conflict resolved
+* git commit # records how resolved
+
+* git checkout --conflict=merge hello.rb
+* git rerere #resolves it
+
+* git merge --rerere-autoupdate
+* git config --global rerere.autoupdate 1
+
+enviroment
+
+GIT_DIR or --git-dir=
+GIT_INDEX_FILE
+git status -s 
+git read-tree HEAD
+GIT_WORK_TREE
+
+overwriting your credentials
+GIT_AUTHOR_NAME
+GIT_AUTHOR_EMAIL
+
+ribbit and libgit

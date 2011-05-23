@@ -1,0 +1,2 @@
+* mining ruby code https://github.com/michaelfeathers/repodepot-ruby
+** and see http://trevmex.com/post/5578762111/mining-rails-learning-from-your-apps-lifeline

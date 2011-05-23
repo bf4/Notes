@@ -1,0 +1,7 @@
+* Javascript testing http://try-jasmine.heroku.com/index.html Try Jasmine Javascript Testing https://github.com/searls/try-jasmine
+* Javascript libraries http://jsfiddle.net/
+* Ruby regex http://rubular.com/
+* Ruby http://tryruby.org/ (https://github.com/Sophrinix/TryRuby)
+* Try Redis http://try.redis-db.com/ (https://github.com/alexmchale/try.redis)
+
+* google javascript closure compiler http://code.google.com/closure/ 

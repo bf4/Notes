@@ -1,0 +1,11 @@
+* http://knowsql.heroku.com https://github.com/ngauthier/knowsql
+
+RAILS 3
+* http://railscasts.com/episodes/266-http-streaming
+
+RAILSCONF2011 slides etc http://en.oreilly.com/rails2011/public/schedule/proceedings
+* be more productive http://smartic.us/doodads/presentations/railsconf2011/#1
+* blog post http://blogs.law.harvard.edu/lianaleahy/2011/05/20/post-railsconf-wrap-up/
+
+Ruby
+* concurrency mike perham threads fibers events actors http://vimeo.com/23933313

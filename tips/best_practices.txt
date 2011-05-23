@@ -1,0 +1,1 @@
+* deployment (rvm bsdm) https://rvm.beginrescueend.com/deployment/best-practices/

@@ -1,0 +1,1 @@
+* good primary key http://lists.basho.com/pipermail/riak-users_lists.basho.com/2011-April/003819.html
