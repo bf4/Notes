@@ -1,0 +1,1 @@
+* wp plugins and solving problems http://code.ipstenu.org/2011/how-to-support-plugins/

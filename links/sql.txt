@@ -1,1 +1,4 @@
 * good primary key http://lists.basho.com/pipermail/riak-users_lists.basho.com/2011-April/003819.html
+* load data from file or dump http://stackoverflow.com/questions/4441711/mysql-load-data-local-infile
+* insert speed http://dev.mysql.com/doc/refman/5.0/en/insert-speed.html
+* load data ref http://dev.mysql.com/doc/refman/5.0/en/load-data.html

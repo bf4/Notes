@@ -1,0 +1,8 @@
+links to review
+
+* http://www.kungfoocode.org/how-to/my-perfect-irssi-setup/
+* http://linuxreviews.org/software/irc/irssi/
+* includes screen http://lizzie.spod.cx/screenirssi.shtml
+* http://www.irssi.org/documentation/tips
+* http://www.irssi.org/documentation/startup
+* guide to efficiently using irssi and screen http://quadpoint.org/articles/irssi
