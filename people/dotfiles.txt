@@ -1,1 +1,11 @@
 * https://github.com/garybernhardt/dotfiles
+* https://github.com/markglenn/vimfiles
+* https://github.com/michaelthies/dotfiles
+
+
+* vim articles
+** http://nvie.com/posts/how-i-boosted-my-vim/
+** using git submodules http://blip.tv/scott-chacon/git-submodules-4237680
+* http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/ and http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
+* http://gitcasts.com/
+* http://blip.tv/scott-chacon

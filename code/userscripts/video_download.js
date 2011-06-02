@@ -1,0 +1,247 @@
+
+// ==UserScript==
+// @name           ViewTube
+// @url            http://userscripts.org/scripts/review/87011
+// @version        8.5
+// @namespace      sebaro
+// @description    Watch videos from video sharing websites without the need for Flash Player.
+// @include        http://www.youtube.com/*
+// @include        http://youtube.com/*
+// @include        http://www.metacafe.com/*
+// @include        http://metacafe.com/*
+// @include        http://www.vimeo.com/*
+// @include        http://vimeo.com/*
+// @include        http://www.blip.tv/*
+// @include        http://blip.tv/*
+// @include        http://www.dailymotion.com/*
+// @include        http://dailymotion.com/*
+// @include        http://www.break.com/*
+// @include        http://break.com/*
+// @include        http://www.megavideo.com/*
+// @include        http://megavideo.com/*
+// @include        http://video.google.com/*
+// @include        http://www.facebook.com/*
+// @include        http://facebook.com/*
+// ==/UserScript==
+
+/* YouTube */
+if (window.location.href.indexOf('youtube.com') != -1) {
+  var ytVideoContent = document.getElementById('watch-player');
+  if (ytVideoContent == null) return;
+  var ytFlashValues = ytVideoContent.innerHTML;
+  var ytVideosParse = ytFlashValues.match(/&amp;fmt_url_map=([^($)]*)&amp;csi_page_type/);
+  ytVideos = (ytVideosParse != null) ? ytVideosParse[1] : null;
+  var ytVideoFHDParse = ytVideos.match(/37%7C([^($)]*)%2C22/);
+  ytVideoFHD = (ytVideoFHDParse != null) ? unescape(ytVideoFHDParse[1]) : null;
+  if (ytVideoFHD != null) {
+    ytVideoPath = ytVideoFHD;
+  }
+  else {
+    var ytVideoHDParse = ytVideos.match(/22%7C([^($)]*)%2C35/);
+    ytVideoHD = (ytVideoHDParse != null) ? unescape(ytVideoHDParse[1]) : null;
+    if (ytVideoHD != null) {
+      ytVideoPath = ytVideoHD;
+    }
+    else {
+      var ytVideoSDParse = ytVideos.match(/18%7C([^($)]*)%2C5/);
+      ytVideoSD = (ytVideoSDParse != null) ? unescape(ytVideoSDParse[1]) : null;
+      if (ytVideoSD != null) {
+        ytVideoPath = ytVideoSD;
+      }
+      else {
+        var ytVideoLDParse = ytVideos.match(/%2C5%7C([^($)]*)/);
+        ytVideoLD = (ytVideoLDParse != null) ? unescape(ytVideoLDParse[1]) : null;
+        ytVideoPath = ytVideoLD;
+      }
+    }
+  }  
+  var ytFlashMess = document.getElementById('flash10-promo-div');
+  ytFlashMess.style.width = '0px';
+  ytFlashMess.style.height = '0px';
+  ytFlashMess.style.padding = '0';
+  ytFlashMess.style.backgroundColor = '#ffffff';
+  var ytMyVideoContent = document.createElement('div');
+  ytMyVideoContent.style.width = '640px';
+  ytMyVideoContent.style.height = '390px';
+  ytMyVideoContent.style.backgroundColor = '#000000';
+  document.getElementById('watch-video').replaceChild(ytMyVideoContent,ytVideoContent);
+  ytMyVideoContent.innerHTML = '<a href="' + ytVideoPath + '">Download</a>';
+}
+
+/* MetaCafe */
+else if (window.location.href.indexOf('metacafe.com') != -1) {
+  var mcVideoDiv = document.getElementById('adaptvDiv');
+  var mcVideoContent = document.getElementById('fpObj');
+  if (mcVideoContent == null) return;
+  var mcFlashValues = mcVideoContent.innerHTML;
+  var mcParsePaths = mcFlashValues.match(/mediaURL%22%3A%22([^($)]*)postRollContentURL/);
+  var mcVideosParse = (mcParsePaths != null) ? mcParsePaths[1] : null;
+  var mcHDVideoParse = mcVideosParse.match(/highDefinitionMP4([^($)]*)/);
+  var mcVideosParseMore = (mcHDVideoParse != null) ? mcHDVideoParse[1] : mcParsePaths[0];
+  var mcVideoParse = mcVideosParseMore.match(/mediaURL%22%3A%22([^($)]*)%22%2C%22key/);
+  var mcVideo = (mcVideoParse != null) ? mcVideoParse[1] : null;
+  mcVideo = unescape(mcVideo);
+  mcVideo = mcVideo.replace(/\\/g, '');
+  var mcKeyParse = mcVideosParseMore.match(/key%22%3A%22([^($)]*)%22%7D%7D/);
+  var mcKey = (mcKeyParse != null) ? mcKeyParse[1] : null;
+  mcKey = unescape(mcKey);
+  var mcVideoPath = mcVideo + '?__gda__=' + mcKey;
+  mcVideoDiv.innerHTML = '<embed width="100%" height="100%" type="video/avi" src=' + mcVideoPath + '></embed>';
+}
+
+/* Vimeo */
+else if (window.location.href.indexOf('vimeo.com') != -1) {
+  var viVideoDivIDParse = document.body.innerHTML.match(/div id="([^($)]*)" class="f player"/);
+  var viVideoDivID = (viVideoDivIDParse != null) ? viVideoDivIDParse[1] : null;
+  var viVideoIDParse = viVideoDivID.match(/player_([^($)]*)_/);
+  var viVideoID = (viVideoIDParse != null) ? viVideoIDParse[1] : null;
+  var viXMLParse = 'http://vimeo.com/moogaloop/load/clip:' + viVideoID;
+  var xmlHTTP = new XMLHttpRequest();
+  xmlHTTP.open("GET",viXMLParse,false);
+  xmlHTTP.send();
+  viVideoisHD = xmlHTTP.responseXML.getElementsByTagName('isHD')[0].textContent;
+  viVideoQ = (viVideoisHD == 1) ? "hd" : "sd";
+  viReqSign = xmlHTTP.responseXML.getElementsByTagName('request_signature')[0].textContent;
+  viReqSignExp = xmlHTTP.responseXML.getElementsByTagName('request_signature_expires')[0].textContent;
+  viVideoPath = 'http://www.vimeo.com/moogaloop/play/clip:' + viVideoID + '/' + viReqSign + '/' + viReqSignExp + '/?q=' + viVideoQ;
+  var viVideoDiv = document.getElementById(viVideoDivID);
+  viVideoDiv.innerHTML = '<a href=' + viVideoPath + '>Download</a>';
+}
+
+/* Blip */
+else if (window.location.href.indexOf('blip.tv') != -1) {
+  var blVideoDiv = document.getElementById('video_player');
+  var blVideoPath = blVideoDiv.innerHTML.match(/setPrimaryMediaUrl\("([^($)]*)\?referrer/);
+  blVideoPath = (blVideoPath != null) ? blVideoPath[1] : null;
+  blVideoDiv.innerHTML = '<a href=' + blVideoPath + '>Download</a>';
+}
+
+/* DailyMotion */
+else if (window.location.href.indexOf('dailymotion.com') != -1) {
+  var dmVideoContent = document.getElementsByClassName('dmco_html player_box')[0];
+  var dmVideoContentParse = dmVideoContent.innerHTML.match(/Parameters%22%3A%7B%22([^($)]*)%22%2C%22allowStageVideo/);
+  dmVideoContentParse = (dmVideoContentParse != null) ? dmVideoContentParse[1] : null;
+  var dmHDVideoParse = dmVideoContentParse.match(/hdURL%22%3A%22([^($)]*)/);
+  var dmHDVideoPath = (dmHDVideoParse != null) ? unescape(dmHDVideoParse[1]).replace(/\\/g, '') : null;
+  if (dmHDVideoPath != null) {
+    var dmVideoPath = dmHDVideoPath;
+  }
+  else {
+    var dmHQVideoParse = dmVideoContentParse.match(/hqURL%22%3A%22([^($)]*)/);
+    var dmHQVideoPath = (dmHQVideoParse != null) ? unescape(dmHQVideoParse[1]).replace(/\\/g, '') : null;
+    if (dmHQVideoPath != null) {
+      var dmVideoPath = dmHQVideoPath;
+    }
+    else {
+      var dmSDVideoParse = dmVideoContentParse.match(/sdURL%22%3A%22([^($)]*)/);
+      var dmSDVideoPath = (dmSDVideoParse != null) ? unescape(dmSDVideoParse[1]).replace(/\\/g, '') : null;
+      var dmVideoPath = dmSDVideoPath;
+    }
+  }
+  dmVideoContent.innerHTML = '<embed height="100%" width="100%" type="video/avi" src=' + dmVideoPath + '></embed>';
+}
+
+/* Break */
+else if (window.location.href.indexOf('break.com') != -1) {
+  var brVideoPlayer = document.getElementById('playerwrap');
+  var brVideoURLParse = document.getElementsByTagName('head')[0].innerHTML.match(/sGlobalFileName=\'([^($)]*)\';EmbedSEOLinkURL/);
+  brVideoURL = (brVideoURLParse != null) ? brVideoURLParse[1] : null;
+  var brVideoTokenParse = document.getElementsByTagName('head')[0].innerHTML.match(/sGlobalToken=\'([^($)]*)\'/);
+  brVideoToken = (brVideoTokenParse != null) ? brVideoTokenParse[1] : null;
+  brVideoPath = brVideoURL + '.mp4?' + brVideoToken;
+  brVideoPlayer.innerHTML = '<embed height="100%" width="100%" type="video/avi" src=' + brVideoPath + '></embed>';
+}
+
+/* MegaVideo */
+else if (window.location.href.indexOf('megavideo.com') != -1) {
+  function mvDecrypt(str, key1, key2) {
+        var loc1 = [];
+        for (var loc3 = 0; loc3 < str.length; ++loc3) {
+                loc1.push(("000" + parseInt(str.charAt(loc3), 16).toString(2)).slice(-4));
+        }
+        loc1 = loc1.join("").split("");
+        var loc6 = [];
+        for (var loc3 = 0; loc3 < 384; ++loc3) {
+                key1 = (key1 * 11 + 77213) % 81371;
+                key2 = (key2 * 17 + 92717) % 192811;
+                loc6[loc3] = (key1 + key2) % 128;
+        }
+        for (var loc3 = 256; loc3 >= 0; --loc3) {
+                var loc5 = loc6[loc3];
+                var loc4 = loc3 % 128;
+                var loc8 = loc1[loc5];
+                loc1[loc5] = loc1[loc4];
+                loc1[loc4] = loc8;
+        }
+        for (var loc3 = 0; loc3 < 128; ++loc3) {
+                loc1[loc3] = loc1[loc3] ^ loc6[loc3 + 256] & 1;
+        }
+        var loc12 = loc1.join("");
+        var loc7 = [];
+        for (var loc3 = 0; loc3 < loc12.length; loc3 = loc3 + 4) {
+                var loc9 = loc12.substr(loc3, 4);
+                loc7.push(loc9);
+        }
+        var loc2 = [];
+        for (var loc3 = 0; loc3 < loc7.length; ++loc3) {
+                loc2.push(parseInt(loc7[loc3], 2).toString(16));
+        }
+        return loc2.join("");
+  }
+  document.getElementById('playertd').style.height = '451px';
+  document.getElementById('playerbg').style.backgroundImage='url("mvgui/small_vid_bg2.gif")';
+  document.getElementById('bigmenu').style.display = 'none';
+  document.getElementById('relatedfrm').submit();
+  var mvVideoPlayer = document.getElementById('playerdiv');
+  mvVideoPlayer.style.width = '640px';
+  mvVideoPlayer.style.height = '360px';
+  var mvVideoServerParse = document.body.innerHTML.match(/flashvars.s = "([^($)]\S*)";/);
+  mvVideoServer = (mvVideoServerParse != null) ? mvVideoServerParse[1] : null;
+  var mvVideoTokenUnParse = document.body.innerHTML.match(/flashvars.un = "([^($)]\S*)";/);
+  mvVideoTokenUn = (mvVideoTokenUnParse != null) ? mvVideoTokenUnParse[1] : null;
+  var mvVideoTokenK1Parse = document.body.innerHTML.match(/flashvars.k1 = "([^($)]\S*)";/);
+  mvVideoTokenK1 = (mvVideoTokenK1Parse != null) ? mvVideoTokenK1Parse[1] : null;
+  var mvVideoTokenK2Parse = document.body.innerHTML.match(/flashvars.k2 = "([^($)]\S*)";/);
+  mvVideoTokenK2 = (mvVideoTokenK2Parse != null) ? mvVideoTokenK2Parse[1] : null;
+  var mvVideoToken = mvDecrypt(mvVideoTokenUn,mvVideoTokenK1,mvVideoTokenK2);
+  mvVideoPath = 'http://www' + mvVideoServer + '.megavideo.com/files/' + mvVideoToken + '/video.flv';
+  mvVideoPlayer.innerHTML = '<embed height="100%" width="100%" type="video/avi" src=' + mvVideoPath + '></embed>';
+}
+
+/* Google Video */
+else if (window.location.href.indexOf('video.google.com') != -1) {
+  document.getElementById('player').style.display = 'none';
+  var gvVideoURLParse = document.documentElement.innerHTML.match(/videoUrl\\x3d([^($)]*)\\x26thumbnailUrl/);
+  gvVideoURL = (gvVideoURLParse != null) ? unescape(gvVideoURLParse[1]) : null;
+  var gvMyVideoPlayer = document.createElement('div');
+  gvMyVideoPlayer.style.width = '300px';
+  document.getElementById('player-div').appendChild(gvMyVideoPlayer);
+  gvMyVideoPlayer.innerHTML = '<embed height="100%" width="100%" type="video/avi" src=' + gvVideoURL + '></embed>';
+}
+
+/* Facebook Video */
+else if (window.location.href.indexOf('facebook.com') != -1) {
+  var fbDocument = document.body.innerHTML;
+  fbDocument = fbDocument.replace(/\\u0025/g,'%');
+  var fbHQVideoSrc = fbDocument.match(/"highqual_src", "([^($)]*)"/);
+  fbHQVideoSrc = (fbHQVideoSrc != null) ? unescape(fbHQVideoSrc[1]) : null;
+  if (fbHQVideoSrc != null) {
+    fbVideoPath = fbHQVideoSrc;
+  }
+  else {
+    var fbLQVideoSrc = fbDocument.match(/"lowqual_src", "([^($)]*)"/);
+    fbLQVideoSrc = (fbLQVideoSrc != null) ? unescape(fbLQVideoSrc[1]) : null;
+    if (fbLQVideoSrc != null) {
+      fbVideoPath = fbLQVideoSrc;
+    }
+    else {
+      var fbVideoSrc = fbDocument.match(/"video_src", "([^($)]*)"/);
+      fbVideoSrc = (fbVideoSrc != null) ? unescape(fbVideoSrc[1]) : null;
+      fbVideoPath = fbVideoSrc;
+    }
+  }
+  var fbVideoPlayer = document.getElementById('player');
+  fbVideoPlayer.style.width = '716px';
+  fbVideoPlayer.style.height = '403px';
+  fbVideoPlayer.innerHTML = '<embed height="100%" width="100%" type="video/avi" src=' + fbVideoPath + '></embed>';
+}

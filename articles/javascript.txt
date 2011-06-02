@@ -1,0 +1,28 @@
+* http://www.everyjs.com/ all js: https://github.com/maccman/everyjs.com
+
+* javascript web apps book assets https://github.com/maccman/book-assets
+* jquery mobile single page
+** talk http://alexkessinger.net/2011/04/17/my-jqcon-talk/
+*** outline http://dl.dropbox.com/u/133599/notes/jquery%20con%20outline
+*** slides http://dl.dropbox.com/u/133599/stash/jQueryCon11.pdf
+** refs:
+*** http://www.phonegap.com/
+*** http://documentcloud.github.com/backbone/
+*** http://www.html5rocks.com/features/offline
+*** http://googlecode.blogspot.com/2009/06/gmail-for-mobile-html5-series-cache.html
+*** http://sixrevisions.com/
+*** http://ofps.oreilly.com/titles/9780596805784/
+*** http://westcoastlogic.com/lawnchair/
+*** https://github.com/wycats/jquery-offline
+** video http://vid.ly/5e3s2j or http://alexkessinger.net/2011/05/30/a-screen-cast-of-my-jquerycon11-talk-path-to-hybrid/
+
+* jquery best friends presentation http://jquerysbestfriends.com/#slide1
+* http://addyosmani.com/blog/building-spas-jquerys-best-friends/
+* up and running jquery mobile http://ofps3.vz.oreilly.com/titles/9781449397654/
+* up and running node.js
+* http://addyosmani.com/blog/building-apps-spinejs/
+
+Coffeescript examples
+* https://github.com/maccman/quora2/
+* http://dailyjs.com/2011/05/30/code-review-coffeescript/
+* https://github.com/jamis/csmazes

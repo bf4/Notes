@@ -1,0 +1,10 @@
+Rails Antipatterns
+* http://www.engineyard.com/blog/2011/rails-antipatterns-the-course/ course
+* book http://www.informit.com/store/product.aspx?isbn=0321620283
+* talk http://en.oreilly.com/rails2010/public/schedule/detail/14147
+* book review http://drdobbs.com/blogs/tools/229300218
+* slides http://s3.amazonaws.com/tammer_saleh/production/assets/vtm_rails_antipatterns.pdf
+* talk video http://confreaks.net/videos/239-goruco2009-into-the-heart-of-darkness-rails-anti-patterns
+
+Rails 3 recommended stuff (lots of good links)
+* http://net.tutsplus.com/articles/web-roundups/essential-ruby-rails-3-reading-3/

@@ -1,0 +1,3 @@
+* oss mailing list http://support.lamsonproject.org/index ; fossil clone http://support.lamsonproject.org/ ~/fossils/lamson.fossil
+* free mailing list for oss projects http://librelist.com/
+* source for oss librelist http://support.librelist.com/wiki?name=Librelist

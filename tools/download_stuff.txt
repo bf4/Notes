@@ -1,0 +1,4 @@
+VIDEOS
+
+* http://vid.ly/ flv download link e.g. http://cf.cdn.vid.ly/5e3s2j/flv.flv
+ from http://vid.ly/5e3s2j

@@ -1,1 +1,2 @@
 * CS http://spin.atomicobject.com/2011/05/17/the-deep-end-of-the-pool/
+* imperitive vs. functional programming http://apocalisp.wordpress.com/2011/05/30/imperative-vs-functional-programming/

@@ -1,1 +1,2 @@
 * trans from jap ruby m17n http://yokolet.blogspot.com/2009/07/design-and-implementation-of-ruby-m17n.html multilingualization ruby 1.9
+* art of failure handling http://avdi.org/devblog/2011/05/30/null-objects-and-falsiness/

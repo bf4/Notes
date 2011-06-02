@@ -104,3 +104,16 @@ GIT_AUTHOR_NAME
 GIT_AUTHOR_EMAIL
 
 ribbit and libgit
+
+
+git bash completion
+cp /usr/local/Cellar/git/<version>/etc/bash_completion.d/git-completion.bash ~/.git-completion.bash
+
+Stick this in your .bash_profile:
+
+# Git tab completion
+source ~/.git-completion.bash
+# Show branch in status line
+PS1='[\W$(__git_ps1 " (%s)")]\$ '
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+
