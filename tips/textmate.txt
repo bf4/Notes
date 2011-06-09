@@ -1,0 +1,4 @@
+*setup
+  Preferences, Advance
+  TM_RUBY = /Users/bfleischer/.rvm/bin/rvm-auto-ruby
+  TM_PATH = /Users/bfleischer/.rvm/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/Users/bfleischer/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/share/npm/bin 
