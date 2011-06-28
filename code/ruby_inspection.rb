@@ -4,14 +4,14 @@ def print_class_with_method(klass,method)
   puts "----------"
 end
 # File activesupport/lib/active_support/inflector.rb, line 278
-  def constantize(camel_cased_word)
-    unless /\A(?:::)?([A-Z]\w*(?:::[A-Z]\w*)*)\z/ =~ camel_cased_word
-      raise NameError, "#{camel_cased_word.inspect} is not a valid constant name!"
-    end
-
-    Object.module_eval("::#{$1}", __FILE__, __LINE__)
+def constantize(camel_cased_word)
+  unless /\A(?:::)?([A-Z]\w*(?:::[A-Z]\w*)*)\z/ =~ camel_cased_word
+    raise NameError, "#{camel_cased_word.inspect} is not a valid constant name!"
   end
 
+  Object.module_eval("::#{$1}", __FILE__, __LINE__)
+end
+#Module.constants (what's instantiated)
 # also see
 # http://snippets.dzone.com/posts/show/12065, and http://stackoverflow.com/questions/3488203/how-do-i-see-where-in-the-class-hierarchy-a-method-was-defined-and-overridden-in
 # http://snippets.dzone.com/posts/show/2992
@@ -25,7 +25,7 @@ print_class_with_method("Foo","public_methods") # Foo.methods
 print_class_with_method("Foo", "private_methods")
 print_class_with_method("Foo","protected_methods")
 f = Foo.new
-#p f.ancestors
+print_class_with_method("Foo","ancestors")
 @bar = "hiya"
 # p "each object space String"
 # count = ObjectSpace.each_object(String) {|x| p x}
@@ -79,3 +79,4 @@ print_class_with_method("Module","protected")
 # include Mod
 # exit(99)
 
+  
