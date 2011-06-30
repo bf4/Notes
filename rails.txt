@@ -1,6 +1,13 @@
+#recognize routes
+rs = ActionController::Routing::Routes
+puts rs.routes
+rs.recognize_path "/event/edit/1"
+
 namespacing
 
 * don't name a model "Task", else you may get an inheritance error from "Rake::Task:Class"
+* don't name an attribute 'type'.  That is a deprecated alias for .class
+** if you find it, alias :my_poorly_named_type_attribute :type and use that
 
 * FIND SELECT
 
