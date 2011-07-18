@@ -1,0 +1,9 @@
+# Parse HTML using different parsers, then show the differences between the generated trees.
+https://github.com/tenderlove/tree_diff
+
+# old nokogiri docs
+https://github.com/tenderlove/article/blob/master/nokogiri.markdown
+# find ruby conf la 2010 aaron patterson talk
+
+#html sanitization and parsing
+https://github.com/flavorjones/loofah

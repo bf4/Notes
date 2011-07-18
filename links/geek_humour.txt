@@ -1,0 +1,2 @@
+# convert ruby to enterprise xml
+https://github.com/tenderlove/enterprise

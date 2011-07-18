@@ -1,2 +1,6 @@
-#gems ruby1.9
+#gems ruby1.9j
 http://isitruby19.com/
+
+#performance
+# 
+tracing method slowness http://tenderlovemaking.com/2011/06/29/i-want-dtrace-probes-in-ruby/ (and see  https://github.com/tmm1/perftools.rb )

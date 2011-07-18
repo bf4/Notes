@@ -7,3 +7,22 @@
 * Standalone "IE Super Preview 6,7,8":http://www.microsoft.com/downloads/en/details.aspx?FamilyID=8e6ac106-525d-45d0-84db-dccff3fae677&displaylang=en
 * OSX Finder "droplet to open current folder in terminal":http://cdto.googlecode.com/
 * "Time Tracker":http://www.codehackers.net/timecard/Stone%20Hill%20Time%20Card.zip
+
+# fill out adp in ruby
+https://github.com/tenderlove/milton
+
+#rdoc to epub
+https://github.com/tenderlove/paddle
+
+# generate .dot files from object graph
+https://github.com/tenderlove/awkward
+
+# ruby racc lexical scanner
+https://github.com/tenderlove/rexical
+
+# mail library in ruby
+https://github.com/mikel/mail
+
+# memegenerator.net cli
+https://github.com/drbrain/meme
+http://bookmarklets.heroku.com/bookmarklets/1814

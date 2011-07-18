@@ -1,2 +1,20 @@
 #disk space
 df -kh
+
+#ssl and openssl
+# http://nl.globalsign.com/en/support/ssl+certificates/openssl/openssl+commands/
+
+If you are receiving certificate errors, try one of the following commands to debug a SSL connection. Use our Site Check as well to check the certificate.
+
+Check the MD5 hash of the public key
+
+openssl x509 -noout -modulus -in certificate.crt | openssl md5
+openssl rsa -noout -modulus -in privateKey.key | openssl md5
+openssl req -noout -modulus -in CSR.csr | openssl md5
+Check an SSL connection. All certificates (also intermediates) should be shown
+
+openssl s_client -connect https://www.paypal.com:443
+# and see http://www.sslshopper.com/article-most-common-openssl-commands.html
+# http://www.madboa.com/geek/openssl/#cs-www
+# http://gagravarr.org/writing/openssl-certs/others.shtml installing certs in openssl
+# ruby net::http verify https://github.com/jamesgolick/always_verify_ssl_certificates/blob/master/lib/always_verify_ssl_certificates.rb

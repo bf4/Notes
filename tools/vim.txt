@@ -6,3 +6,6 @@ habits
 
 Record and play
 * http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/
+
+# dotvim
+https://github.com/tenderlove/dot_vim

@@ -7,3 +7,40 @@ http://www.engineyard.com/university/screencasts/javascript-tests-with-jasmine
 
 # *nix ruby
 http://getconfed.com/events/goruco-2009/presentations/the-ruby-guide-to-nix-plumbing
+
+# bdsm and rvm with wayne seguin
+# http://www.vimeo.com/25735433
+#
+# #hack to learn
+# http://www.darknet.org.uk/2011/07/vega-open-source-cross-platform-web-application-security-assessment-platform/
+#
+# ie history
+# http://windows.microsoft.com/en-US/internet-explorer/products/history
+#
+# nov 18 scna conference in chicago with corey haines
+# http://scna.softwarecraftsmanship.org/
+#
+# interviews with derek sivers
+# http://sivers.org/i1106
+#
+# tim bray on google+
+# http://www.tbray.org/ongoing/When/201x/2011/07/04/Google-plus
+#
+# time for programmers
+# http://unix4lyfe.org/time/
+#
+# alex maccaw commonjs for rails js packaging
+# http://alexmaccaw.co.uk/posts/2011/06/30/rails_js_packaging.html
+# and http://news.ycombinator.com/item?id=2721821
+#
+# stack overflow dev days 2011
+# http://meta.stackoverflow.com/questions/88052/what-topics-would-you-like-to-learn-at-devdays-2011
+# http://devdays.stackoverflow.com/
+#
+# noscript http://noscript.net/
+#
+# ascii casts resque
+# http://asciicasts.com/episodes/271-resque
+#
+# appinit dll in windows
+# http://blogs.msdn.com/b/oldnewthing/archive/2007/12/13/6648400.aspx

@@ -11,10 +11,10 @@ module Utils
     attr_writer :url
     attr_accessor :max_redirects
   
-    def initialize(url)
+    def initialize(url, timeout=60)
       @max_tries = 3
       @url = url
-      @timeout = 60
+      @timeout = timeout
       @max_redirects = 2
     end
 
