@@ -2,7 +2,8 @@ pruning your local remote branch references
 
 * git remote prune origin      #where origin is the remote name, removes and references your local git repo has to remotes that have since been deleted. i.e. cleans up invalid remote branch references when you run "git branch -r"
 
-
+gitignore
+# for local ignores not in source control, edit .git/info/excludes
 submodules
 
 Setting up

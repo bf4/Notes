@@ -1,3 +1,4 @@
+* project blacklight ruby on rails search catalog for documents
 * Chrome js loader https://github.com/defunkt/dotjs
 * Lazy load js https://github.com/chriso/load.js
 * command line jquery https://github.com/visionmedia/query

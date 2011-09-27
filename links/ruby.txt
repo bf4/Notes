@@ -1,0 +1,33 @@
+== StyleGuides ==
+
+=== Ruby ===
+
+* https://gist.github.com/1105334 also http://cheat.errtheblog.com/s/styleguide/
+* hashrocket style guide https://github.com/hashrocket/styleguide/blob/master/RUBY-STYLE
+* Ruby Mendicant University guide https://github.com/rmu/wiki/wiki/Style-Guide
+* http://www.caliban.org/ruby/rubyguide.shtml#vim
+* https://github.com/turboladen/tailor/wiki
+* http://pathfindersoftware.com/2008/10/elements-of-ruby-style/
+** http://www.rubyinside.com/ruby-style-guides-and-tools-how-to-write-good-looking-ruby-1272.html
+* Rails conventions http://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html#follow-the-coding-conventions
+** Rails API conventiosn http://edgeguides.rubyonrails.org/api_documentation_guidelines.html
+** Rails API example code http://edgeguides.rubyonrails.org/api_documentation_guidelines.html#example-code
+** Blogging style http://www.engineyard.com/blog/engine-yard-blogging-style-guide/
+
+=== Javascript ===
+
+* http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+
+=== Python ===
+
+* http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+
+==== VIM ====
+
+* http://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
+
+
+=== RSpec ===
+
+* http://rubyspec.org/style_guide/
+** let http://ruby-lambda.blogspot.com/2011/02/agile-rspec-with-let.html

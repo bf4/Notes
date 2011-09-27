@@ -1,0 +1,18 @@
+* 2011-12-15 DC http://devdays.stackoverflow.com/washington-dc/
+* http://railsconf.com
+* 2011-06-25 Portland http://www.oscon.com/oscon2011
+* 2011-06-14 http://velocityconf.com http://blip.tv/oreilly-velocity-conference/rss
+* 2010-08-01 https://www.defcon.org/html/defcon-19/dc-19-faq.html https://twitter.com/#!/_defcon_
+* 2011-09-29 http://rubyconf.stagehq.com/
+* 2011-04-01 Reston http://www.rubynation.org/ http://blip.tv/rubynation
+* 2011-08-03 DC http://jrubyconf.com/
+* https://developer.apple.com/videos/wwdc/2011/index.php
+* 2011-06-06 Chicagohttp://www.webcontent2011.com/program
+* windycitygo windycitydb windycityrails
+* 2011-09-03 Chicago http://chicagowebconf.org/
+* 2011-11-18 Chicago http://scna.softwarecraftsmanship.org/
+* http://conferences.oreillynet.com/
+* 2011-06 http://greatlakesrubybash.com/ http://twitter.com/#!/greatlakesruby
+* 2011-07 Chicago http://www.sparkchi.com/
+* http://techweek.org/
+* http://chicago.startupweekend.org/

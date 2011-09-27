@@ -1,1 +1,7 @@
 * trap Ctrl+C for controlled shutdown http://obtiva.com/blog/185-fun-with-ruby-it-s-a-trap
+
+super cool ruby trace function and module
+set_trace_func proc {|event, file, line, id, binding, classname| printf "%8s %s:%-2d %10s %8s\n", event, file, line, id, classname } 
+and
+
+http://media.pragprog.com/titles/ruby3/code/samples/trace_calls.rb

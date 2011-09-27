@@ -1,0 +1,5 @@
+set autoeval
+set autolist
+set listsize 10
+l=
+help

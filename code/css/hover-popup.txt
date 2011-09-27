@@ -1,0 +1,10 @@
+<style type="text/css">
+div#links a {display: inline; text-align: left;  margin: 0 0 1px;   border-width: 0;   text-decoration:underline;   text-underline-style:dotted;    }
+div#links a:hover {    border: none 1px  text-decoration:none;   text-underline-style:none;}
+div#links a span {  display: none;}
+div#links a:hover span {  display: inline;   margin: 10px z-index: auto;   }
+.popup {  text-decoration:underline;   text-underline-style:solid;}
+</style>
+<div id="links"><a href="#">hover over this <span class="popup">
+<img src="linkhere" />
+</span> for the image</a></div>
