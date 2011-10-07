@@ -1,0 +1,14 @@
+fdupes -fr . > fdupes.txt
+cat fdupes.txt | while read x ; do mv "$x" ../duplicates ; done
+cat fdupes.txt | xargs -0 mv  -t ../duplicates
+
+find . -iname 'IMG*-1.???' -exec rm '{}' ';'
+find . -iname '*-1.???' -ok rm '{}' ';'
+find  . -type f -print | grep ' -1.'
+spec -fs life_spec.rb 
+328  tcmpdump -i any
+329  brew install tcmpdump
+330  tcpdump -i any
+331  sudo tcpdump -i any
+332  sudo tcpdump -i br0
+

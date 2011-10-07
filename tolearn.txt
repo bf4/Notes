@@ -1,0 +1,9 @@
+manipulate YAML
+
+metric_fu
+
+benchmarking
+
+looks for orphaned code, unused, need an entry point
+
+switch rvmrc and gemsets in and out for testing against different platforms
