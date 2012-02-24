@@ -1,21 +1,26 @@
 * OSX open encoded file using ruby 1.9.2
 
-system("file -I encoded_file.txt > enc.txt")
-e = File.open("enc.txt", "r") 
-enc = e.read
-e.close
-enc_match = enc.match(/charset=(.*)$/)
-encoding = enc_match[1]
+def read_encoded_file(name)
+  enc_name = "enc.txt"
+  system("file -I #{name} > #{enc_name}")
+  enc = File.read(enc_name_
+  enc_match = enc.match(/charset=(.*)$/)
+  encoding = enc_match[1]
 
-f = File.open("encoded_file.txt","rb:#{encoding}")
-my_file = f.read
-f.close
+  File.open(name,"rb:#{encoding}") do |f|
+    my_file = f.read
+    File.open('enc_' + name, 'w+') do |file|
+      utf8_file = my_file.encode("UTF-8", "#{encoding}")
+      file.write(utf8_file)
+    end
+  end
+end
 
 
-my_file.encode("UTF-8", "#{encoding}")
 
 * What's running on port 5984?
 ** lsof -i -P | grep 5984
+** see http://danielmiessler.com/study/lsof/
 ** ps aux | grep $pid #where pid is the process id from the previous output
 
 ** rvm install rubygems 1.3.7
