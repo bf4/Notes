@@ -19,17 +19,12 @@ class WhiteListTagScrubber < Loofah::Scrubber
 
       if tags.include? node.name
         # remove all attributes except the ones we whitelisted per tag
-        node.attributes.each { |attr| node.remove_attribute(attr.first) unless Array(attributes[node.name]).include?(attr.first)}
+        clean_with_attributes(node,true)
         return Loofah::Scrubber::CONTINUE if node.namespaces.empty?
       else
-        new_node_text = node_tagless_text(node)
-        node.content = new_node_text
-        if new_node_text == ""
-          node.remove
-        else
-          node.replace new_text(node,new_node_text)
-        end
-        return Loofah::Scrubber::CONTINUE
+        clean_with_attributes(node,false)
+        remove_node_and_add_children(node)
+        return Loofah::Scrubber::CONTINUE if node.namespaces.empty?
       end
     when Nokogiri::XML::Node::TEXT_NODE, Nokogiri::XML::Node::CDATA_SECTION_NODE
       return Loofah::Scrubber::CONTINUE
@@ -37,28 +32,14 @@ class WhiteListTagScrubber < Loofah::Scrubber
     node.remove
     Loofah::Scrubber::STOP
   end
-  # see https://github.com/flavorjones/mcbean/blob/master/lib/mcbean/markdown.rb
-  def new_text(node, text)
-    Nokogiri::XML::Text.new(text, node.document)
+  def remove_node_and_add_children(node)
+    current_node = node
+    node.children.each {|kid| current_node = current_node.add_next_sibling(kid) }
+    node.remove
   end
-  def node_tagless_text(node)
-    node.children.map do |child|
-      if child.text?
-        child.text
-      else
-        if tags.include? child.name
-
-          tag_cleaner(child) #if it's an allowed element in a disallowed element...  
-          node_tagless_text(child)
-        else
-          node_tagless_text(child)
-        end
-      end
-    end.compact.join(' ').strip
-  end
-  def tag_cleaner(node)
-       # remove all attributes except the ones we whitelisted per tag
-        node.attributes.each { |attr| node.remove_attribute(attr.first) unless Array(attributes[node.name]).include?(attr.first)}
+  def clean_with_attributes(node,use_attributes=true)
+    attr_array = use_attributes ? attributes[node.name] : nil
+    node.attributes.each { |attr| node.remove_attribute(attr.first) unless Array(attr_array).include?(attr.first)}
   end
 end
 
@@ -103,10 +84,10 @@ describe 'custom scrubber' do
     %q{<strong class="test">Testing<p id="foo">and such</p></strong><br>This rocks<em>hi</em>},
     %q{<h1>i'm in an <em>mmmmm</em></h1>'} =>
     %q{i'm in an <em>mmmmm</em>'}
-    
+
   }
   puts "cleaning #{tags_we_want.inspect}"
-  examples.each do |message_dirty,message_clean|  
+  examples.each do |message_dirty,message_clean|
     it "cleans up the the message" do
       updater.clean_html(message_dirty, tags_we_want.keys, tags_we_want) {|html| updater.line_breaks_to_br(html) }.should eql(message_clean)
     end
