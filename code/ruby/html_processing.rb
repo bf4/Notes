@@ -34,7 +34,14 @@ class WhiteListTagScrubber < Loofah::Scrubber
     Loofah::Scrubber::STOP
   end
   def remove_node_and_add_children(node)
-    node.before node.children
+    # alternatively see :strip
+    # node.before node.children
+    current_node = node
+    node.children.each do |kid|
+      previous_node = current_node
+      current_node = current_node.add_next_sibling(kid)
+      scrub(previous_node) unless previous_node == node
+    end
     node.remove
   end
   def clean_with_attributes(node,use_attributes=true)
@@ -46,7 +53,7 @@ end
 class CustomScrubber
   # uses Loofah
   def clean_html(html, tags=[],attributes={})
-    #see RoundUpItem
+
     yield Loofah.fragment(html).scrub!(scrub_tags_except(tags,attributes)).to_s
 
   end
@@ -83,13 +90,18 @@ describe 'custom scrubber' do
     %q{<strong class='test'>Testing<p id="foo" style="display:none;">and such</p></strong><br><h1>This rocks</h1><em>hi</em>} =>
     %q{<strong class="test">Testing<p id="foo">and such</p></strong><br>This rocks<em>hi</em>},
     %q{<h1>i'm in an <em>mmmmm</em></h1>'} =>
-    %q{i'm in an <em>mmmmm</em>'}
+    %q{i'm in an <em>mmmmm</em>'},
+    %q(<div align="center"><b>NABL Presents:</b><br><br><b>OUTLAWS vs. CAPITALS</b><br><br><b>Monday April 9, 2012&nbsp;, 7pm </b><br><br><b>@ Nettleton Stadium</b><br><br><b>$10 General Admission</b><br><b>$25 VIP- rows 1-10</b><br></div>) =>
+             %q(NABL Presents:   OUTLAWS vs. CAPITALS   Monday April 9, 2012&nbsp;, 7pm   @ Nettleton Stadium   $10 General Admission  $25 VIP- rows 1-10),
+
 
   }
   puts "cleaning #{tags_we_want.inspect}"
   examples.each do |message_dirty,message_clean|
     it "cleans up the the message" do
-      updater.clean_html(message_dirty, tags_we_want.keys, tags_we_want) {|html| updater.line_breaks_to_br(html) }.should eql(message_clean)
+      updater.clean_html(message_dirty, tags_we_want.keys, tags_we_want) do |html|
+        updater.line_breaks_to_br(html)
+      end.should eql(message_clean)
     end
   end
 end
