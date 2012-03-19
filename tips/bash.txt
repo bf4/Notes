@@ -5,10 +5,27 @@ cat fdupes.txt | xargs -0 mv  -t ../duplicates
 find . -iname 'IMG*-1.???' -exec rm '{}' ';'
 find . -iname '*-1.???' -ok rm '{}' ';'
 find  . -type f -print | grep ' -1.'
-spec -fs life_spec.rb 
+spec -fs life_spec.rb
 328  tcmpdump -i any
 329  brew install tcmpdump
 330  tcpdump -i any
 331  sudo tcpdump -i any
 332  sudo tcpdump -i br0
+
+
+#lsof
+
+file parsing
+
+# gunzip file as stream and split each line on pipe, select 3rd and 4th columns, sort, get count of uniq items, sort by number, and get the last 10
+gzip -dc filename.csv.gz | cut -d'|' -f3,4 | sort | uniq -c | sort -n | tail -10
+
+# find zero length files
+find . -type f -size 0 -print0 # optionally find . -type f -size 0 -print0 | xargs -0 rm -f
+du -h
+du -k
+stat
+wc -c
+# find empty directories
+find . -type d -empty
 
