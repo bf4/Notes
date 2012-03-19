@@ -74,7 +74,9 @@ end
 describe 'custom scrubber' do
   let(:updater) {CustomScrubber.new }
   all_attributes = ['id','class']
-  tags_we_want = {'br' => [],
+  tags_we_want =
+    {
+    'br' => [],
     'ol' => all_attributes,
     'ul' => all_attributes,
     'li' => all_attributes,
@@ -92,7 +94,7 @@ describe 'custom scrubber' do
     %q{<h1>i'm in an <em>mmmmm</em></h1>'} =>
     %q{i'm in an <em>mmmmm</em>'},
     %q(<div align="center"><b>NABL Presents:</b><br><br><b>OUTLAWS vs. CAPITALS</b><br><br><b>Monday April 9, 2012&nbsp;, 7pm </b><br><br><b>@ Nettleton Stadium</b><br><br><b>$10 General Admission</b><br><b>$25 VIP- rows 1-10</b><br></div>) =>
-             %q(NABL Presents:   OUTLAWS vs. CAPITALS   Monday April 9, 2012&nbsp;, 7pm   @ Nettleton Stadium   $10 General Admission  $25 VIP- rows 1-10),
+    %q(NABL Presents:<br><br>OUTLAWS vs. CAPITALS<br><br>Monday April 9, 2012&nbsp;, 7pm <br><br>@ Nettleton Stadium<br><br>$10 General Admission<br>$25 VIP- rows 1-10<br>)
 
 
   }
