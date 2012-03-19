@@ -17,6 +17,7 @@ class WhiteListTagScrubber < Loofah::Scrubber
     case node.type
     when Nokogiri::XML::Node::ELEMENT_NODE
 
+      # see strip: return CONTINUE if html5lib_sanitize(node) == CONTINUE
       if tags.include? node.name
         # remove all attributes except the ones we whitelisted per tag
         clean_with_attributes(node,true)
@@ -33,8 +34,7 @@ class WhiteListTagScrubber < Loofah::Scrubber
     Loofah::Scrubber::STOP
   end
   def remove_node_and_add_children(node)
-    current_node = node
-    node.children.each {|kid| current_node = current_node.add_next_sibling(kid) }
+    node.before node.children
     node.remove
   end
   def clean_with_attributes(node,use_attributes=true)
