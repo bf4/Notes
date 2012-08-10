@@ -1,0 +1,40 @@
+/msg nickserv register password email
+/msg NickServ VERIFY REGISTER username code
+/msg nickserv identify [password]
+/msg nickserv set password [NewPasswordGoesHere]
+
+/msg nickserv help group
+
+add alternate nicks I'm using to my account
+/msg NickServ GROUP
+
+# enforce password checking
+/msg nickserv set enforce on
+
+ /nick newnickname
+ 
+To give yourself operator status /msg chanserv op #wikimedia
+To give someone else operator status /msg chanserv op #wikimedia user
+To set a user to be automatically removed
+/msg chanserv akick #wikipedia add nick!user@host reason to be kicked (use :reason to be kicked (note the additional ":") instead to have spaces in the reason)
+
+Channel operator commands
+Various IRC clients have different commands. Most of the commands in this list should work on all popular IRC clients, but there may be additional commands available or alternate syntax for these commands. If there are multiple commands listed and one command fails to work, try using another to accomplish the same result. Consult your IRC client's manuals, help files, or a general IRC reference for more information about these commands and other command interfaces.
+To kick a user
+/kick #wikimedia jwales
+/kick jwales To ban a user*
+/mode #wikimedia +b nick!user@host To quickly kick and ban a user **
+/kickban jwales To silence a user
+/mode #wikimedia +q nick!user@host To lock the topic***
+/mode #wikimedia +t
+To switch to "moderated" channel mode****
+/mode #wikimedia +m
+To voice a user in moderated channel mode
+/mode #wikimedia +v jwales
+/voice jwales
+/msg chanserv voice #wikimedia jwales
+To relinquish operator privileges
+/mode #wikimedia -o jwales
+/deop jwales
+/msg chanserv op #wikimedia -yournick
+*Banning a user only prevents their entry. They must be kicked separately. ** Depending on your client, the ban may be set on the user's nickname, host, or username+host combination. You may be able to adjust this. (For example, in irssi, /set ban_type host.) Consult your IRC client's documentation. ***Locking the topic prevent non-ops from changing it (useful if a topic war is ongoing) ****In a moderated channel, no one can talk unless they are an operator or are voiced (mode +v). This is usually an extreme measure, since it prevents people from using the channel. Use with discretion.
