@@ -1,10 +1,12 @@
 # GNU screen
 
-   screen -S new_session_name
-   Ctrl+A+D #detach screen
-   screen -ls # list sessions
-   screen -r new_session_name # reattach to the detached session
-   screen -x new_session_name # join an attached sessions
+basics
+
+    screen -S new_session_name
+    Ctrl+A+D #detach screen
+    screen -ls # list sessions
+    screen -r new_session_name # reattach to the detached session
+    screen -x new_session_name # join an attached sessions
    
 ## Scrollback buffer
 
