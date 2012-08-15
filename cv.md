@@ -13,14 +13,19 @@ SUMMARY:
 
 ## PROFESSIONAL EXPERIENCE:
 
-#### Web Development Software Engineer - Metromix - Chicago, IL, July 2010-Current
+#### Senior Ruby Web Developer Software Engineer - SK Intertainment - Chicago, IL, June 2012-Current
+##### Adult Entertainment movie site mentioned in 'Knocked Up'
+* Work on Rails 3 apps and PHP apps
+* MrSkin.com is NSFW
+
+#### Web Development Software Engineer - Metromix / Gannett - Chicago, IL, July 2010-June 2012
 ##### A Social Entertainment Site
 * Writes decoupled single-responsibility ruby code, such as a feature module that only requires one of code to work.
 * I love learning, and sharing, and working with others.  I began and run Metromix's weekly tech lunch.
 * Offers minimum viable solutions as a first step to getting desired functionality coded and used as a spike for subsequent work.
 * Enjoys text-processing, including using regular expressions and XML/HTML parsers such as Nokogiri.
 * Wrote a Net::HTTP wrapper for our deals importer to increase timeouts and provide better error-handling.
-* Often uses math to solve complex problems, such as when I introduced using a weighted comparison of the levenshtein distance for venue name or event title and the number of closely matched words between the strings to pick a correct result. A former developer, when I told him, said "wow, we'd been wanted to do fuzzy matching for a while."
+* Often uses math to solve complex problems.  A former developer, once said "wow, we'd been wanting to do fuzzy matching for a while."
 
 #### Ruby on Rails Contractor - Zavteq - Chicago, IL, 2011
 * Built jQuery Mobile Ruby on Rails 3 site with devise and RSpec.
