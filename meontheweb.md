@@ -2,7 +2,7 @@
 
 * SUNSPOT Solr Search Gem (Ruby) [Adds :offset option to paginate method](https://github.com/sunspot/sunspot/commit/2a99fd395a49f4137fd4d2ced0610367ecabf4fe)
 * HOMEBREW Mac OSX Package Manager (Ruby) [Added writerperfect Formula, can convert wpd to odt with wpd2odt](https://github.com/mxcl/homebrew/pull/4917)
-* BCRYPT-RUBY BCrypt wrapper (Ruby( [Added BCrypt::Password validation method](https://github.com/codahale/bcrypt-ruby/pull/48)
+* BCRYPT-RUBY BCrypt wrapper (Ruby) [Added BCrypt::Password validation method](https://github.com/codahale/bcrypt-ruby/pull/48)
 
 ### OTHER ONLINE PRESENCE
 
