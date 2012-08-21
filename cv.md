@@ -56,9 +56,9 @@ SUMMARY:
 
 ## TECHNICAL SKILLS:
 ### Ruby
-* Two years of Ruby / Rails experience
-* Follows blogs and tweets
-* Regular geekfest / ChicagoRuby
+* Professional Ruby / Rails since 2010
+* Aspires to write loosely-coupled, readable, easily-maintainable code
+* Regular participant in Chicago user group community
 
 #### My Development Toolkit
 * Rails
@@ -85,14 +85,14 @@ SUMMARY:
 
 ### AGILE STUFF
 * Scrum
-* Time boxing
+* Time boxing / Pomodoro
 
 ## EDUCATION:
 
 #### Currently learning about
 * Machine learning, bayesian classifiers, and support vector machines
-* Upgrading from Rails 2.1 and Ruby 1.8.6 to Rails 3.2 and Ruby 1.9.3
-* Reading Objects on Rails by Avdi Grimm
+* A good [Information Diet](http://www.informationdiet.com/)
+* Reading "Objects on Rails" by Avdi Grimm
 
 #### Relevant Coursework
 * Object-Oriented Analysis and Design, 2010
@@ -100,7 +100,7 @@ SUMMARY:
 * Agile Project Management, 2009
 * Data Warehousing and Data Mining, 2008
 * Java, and Java Web Applications, 2008
-* Principles of Account, 1997
+* Principles of Accounting, 1997
 * Introduction to Programming C, 1996
 
 ### Northwestern University School of Continuing Studies, Chicago, IL, 2007-2010.
