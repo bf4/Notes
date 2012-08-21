@@ -91,8 +91,9 @@ SUMMARY:
 
 #### Currently learning about
 * Machine learning, bayesian classifiers, and support vector machines
+* Reviewing ["Rails 3 In Action, 2nd Edition"](http://www.manning.com/bigg2/)
 * A good [Information Diet](http://www.informationdiet.com/)
-* Reading "Objects on Rails" by Avdi Grimm
+* Reading ["Objects on Rails"](http://objectsonrails.com/) and ["Confident Ruby"](http://devblog.avdi.org/2012/06/05/confident-ruby-beta/) by Avdi Grimm
 
 #### Relevant Coursework
 * Object-Oriented Analysis and Design, 2010
