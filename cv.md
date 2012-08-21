@@ -116,4 +116,4 @@ SUMMARY:
 ### OTHER EXPERIENCE:
 * PADI Scuba Diver Certified, 2011
 * Black-Belt Recommended in ATA Songham Taekwondo
-* Secretary on Board of Directors (2009-2011) of 3150 N Lake Shore Drive Condominium Board.  Manage web site and Community Relations & Communications Committee.
+* Director on Condominium Board (2009-Present, Secretary 2009-2011) of 3150 N Lake Shore Drive Condominium.  Manage web site and Community Relations & Communications Committee.
