@@ -8,7 +8,7 @@ SUMMARY:
 ============
 
 * Jack-of-all-trades that picks up what needs to be done, often without being asked.
-* Documents and details work done, share with team.  At Metromix I created developer setup docs we use to boostrap developers and release docs to stabilize the release process.
+* Documents and details work done, share with team.  At Metromix I created developer setup docs used to boostrap developers and release docs to stabilize the release process.
 * I'm most likely to say, "enough talk, let's do it."
 
 ## PROFESSIONAL EXPERIENCE:
