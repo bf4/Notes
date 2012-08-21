@@ -46,7 +46,7 @@ SUMMARY:
 
 * SUNSPOT Solr Search Gem (Ruby) [Adds :offset option to paginate method](https://github.com/sunspot/sunspot/commit/2a99fd395a49f4137fd4d2ced0610367ecabf4fe)
 * HOMEBREW Mac OSX Package Manager (Ruby) [Added writerperfect Formula, can convert wpd to odt with wpd2odt](https://github.com/mxcl/homebrew/pull/4917)
-* JotBot and Rawr  (JRuby) [Builds JotBot on Mountain Lion OS X](https://github.com/Neurogami/JotBot/pulls) and [Build Rawr gem properly without Bundler class conflict](https://github.com/rawr/rawr/pull/18)
+* JotBot and Rawr  (JRuby) [Builds JotBot on Mountain Lion OS X](https://github.com/Neurogami/JotBot/pulls)
 
 ### OTHER ONLINE PRESENCE
 
