@@ -16,6 +16,7 @@ SUMMARY:
 #### Senior Ruby Web Developer Software Engineer - SK Intertainment - Chicago, IL, June 2012-Current
 ##### Adult Entertainment movie site mentioned in 'Knocked Up'
 * Work on Rails 3 apps and PHP apps
+* Re-architected our models for email addresses, passwords, and bounce-processing
 * MrSkin.com is NSFW
 
 #### Web Development Software Engineer - Metromix / Gannett - Chicago, IL, July 2010-June 2012
