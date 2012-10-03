@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'net/https'
+require 'ostruct'
+# require 'always_verify_ssl_certificates'
 # and see https://github.com/jamesgolick/always_verify_ssl_certificates
 module Errors
   class ConnectionError < StandardError; end
@@ -11,11 +13,11 @@ module Utils
     attr_writer :url
     attr_accessor :max_redirects
   
-    def initialize(url, timeout=60)
-      @max_tries = 3
+    def initialize(url, timeout=60,max_tries=1)
+      @max_tries = max_tries
       @url = url
       @timeout = timeout
-      @max_redirects = 2
+      @max_redirects = 3
       @message = ""
       @redirect_message = ""
     end
@@ -32,13 +34,13 @@ module Utils
   
     def safe_open
       @max_tries.times do |try|
-        @timeout += 60 #increase timeout by 60 seconds each try
         begin
           return open_url
-        rescue Exception => e
+        rescue StandardError, Timeout::Error, SocketError, URI::InvalidURIError => e
           if try+1 == @max_tries
             raise Errors::ConnectionError, "Failed connecting to #{@url} after #{try+1} tries, with Timeout #{@timeout} seconds.\n#{e.message}\n #{@message} #{@redirect_message}", caller
           end
+          @timeout += 60 #increase timeout by 60 seconds after each try
         end
       end
     end
@@ -66,6 +68,7 @@ module Utils
           open_url
         else
           puts "Too many redirects"
+          OpenStruct.new(:read_body => "", :body => "")
         end
       else
         http_result(response)
