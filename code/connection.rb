@@ -12,7 +12,7 @@ module Utils
     attr_reader :max_tries, :timeout, :message, :redirect_message
     attr_writer :url
     attr_accessor :max_redirects
-  
+
     def initialize(url, timeout=60,max_tries=1)
       @max_tries = max_tries
       @url = url
@@ -25,39 +25,41 @@ module Utils
     def open_uri
       safe_open
     end
-    
+
     def body
       open_uri.read_body
     end
-  
+
     private
-  
+
     def safe_open
       @max_tries.times do |try|
         begin
           return open_url
-        rescue StandardError, Timeout::Error, SocketError, URI::InvalidURIError => e
+        rescue StandardError, Timeout::Error, Errno::ETIMEDOUT, SocketError, URI::InvalidURIError => e
           if try+1 == @max_tries
-            raise Errors::ConnectionError, "Failed connecting to #{@url} after #{try+1} tries, with Timeout #{@timeout} seconds.\n#{e.message}\n #{@message} #{@redirect_message}", caller
+            message = "Failed connecting to #{@url} after #{try+1} tries, with Timeout #{@timeout} seconds." +
+              "\n#{e.class}:\t#{e.message}\n #{@message} #{@redirect_message}"
+            raise Errors::ConnectionError, message, caller
           end
           @timeout += 60 #increase timeout by 60 seconds after each try
         end
       end
     end
-    
+
     def url=(url)
       @url = url || "nil"
     end
-    
+
     def open_url
-      uri = URI.parse(@url)
+      uri = URI.parse(@url) # raises URI::InvalidURIError
       http = Net::HTTP.new(uri.host, uri.port)
-      http.open_timeout = @timeout 
-      http.read_timeout = @timeout 
+      http.open_timeout = @timeout
+      http.read_timeout = @timeout
       http.use_ssl = (uri.scheme == 'https')
       follow_response(http.request_get( uri.request_uri ) )
     end
-    
+
     def follow_response(response = nil)
       if response.kind_of?(Net::HTTPRedirection)
         if @max_redirects > 0
@@ -91,7 +93,7 @@ module Utils
       else
        response['location']
       end
-    end 
+    end
     # return true if no content-length response header.
     def full_message_received?(response)
       content_length = response["content-length"] || ""
@@ -134,7 +136,7 @@ module Utils
         end
       end
       def redirect(response)
-        @redirect_message += "\n *** Redirecting to #{@url} with code #{response.code}, #{response.class}\n" 
+        @redirect_message += "\n *** Redirecting to #{@url} with code #{response.code}, #{response.class}\n"
         puts "redirecting to #{@url}"
         open_url
       end
