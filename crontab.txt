@@ -1,0 +1,19 @@
+# *     *     *   *    *        command to be executed
+# -     -     -   -    -
+# |     |     |   |    |
+# |     |     |   |    +----- day of week (0 - 6) (Sunday=0)
+# |     |     |   +------- month (1 - 12)
+# |     |     +--------- day of        month (1 - 31)
+# |     +----------- hour (0 - 23)
+# +------------- min (0 - 59)
+# cron invokes the command from the user’s HOME directory with the shell, (/usr/bin/sh).
+# cron supplies a default environment for every shell, defining:
+# HOME=user’s-home-directory
+# LOGNAME=user’s-login-id
+# PATH=/usr/bin:/usr/sbin:.
+# SHELL=/usr/bin/sh
+# redirect output, so no email sent: >/dev/null 2>&1
+# export EDITOR=vim  # requries the below macro
+# au FileType crontab set nobackup nowritebackup
+# Users who desire to have their .profile executed must explicitly do so in the crontab entry or in a script called by the entry.
+*/15 9-17 * * 1-5 say "time to stretch"
