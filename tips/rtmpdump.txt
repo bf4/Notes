@@ -1,0 +1,55 @@
+given
+var flashvars = {
+
+streamer: "rtmp://oxy.videolectures.net/video",
+file: "2007/pascal/bootcamp07_vilanova/keller_mikaela/bootcamp07_keller_bss_01.flv",
+
+height: '288',
+autostart: "true",
+bufferlength: '5',
+
+
+image: "http://media.videolectures.net/play.png",
+
+id: "FlvPlayer" // last line, no colon ',' !
+};
+swfobject.embedSWF("http://media.videolectures.net/jw-player/player.swf", "video_embed", "384", "307", "9.0.0", "http://media.videolectures.net/swfobject/expressInstall.swf", flashvars, params, attributes);
+
+the command is
+rtmpdump -r rtmp://oxy.videolectures.net/video/ -y
+2007/pascal/bootcamp07_vilanova/keller_mikaela/bootcamp07_keller_bss_01 -a
+video -s http://media.videolectures.net/jw-player/player.swf -w
+ffa4f0c469cfbe1f449ec42462e8c3ba16600f5a4b311980bb626893ca81f388 -x 53910 -o
+test.flv
+
+notes:
+he -r switch requires an argument which is the URL of the media server and is found in the variable streamer in the JavaScript source code above.
+
+The -y switch needs the playpath and that is found in the JavaScript variable file, (minus the extension .flv or .mp4).
+
+The -a switch is the name of the used player and usually automatically inferred from the URL. Defining it manually works by copying the part after the server name in the streamer.
+
+The -s switch defines the flash video player which normally connects to the media server. In the example it is the first argument of the function embedSWF.
+
+Here's where things get even more complicated. The media server wants some extra data about this player, specifically its sha256 hash-sum and size in bytes. So lets get them:
+Code:
+    wget http://media.videolectures.net/jw-player/player.swf
+    sha256sum player.swf
+    ls -l player.swf
+Supply the sha256sum to switch -w and the file size to the -x switch.
+
+
+also see
+Download the swf player you want to use for SWFVerification, unzip it using
+
+$ flasm -x file.swf
+
+It will show the decompressed filesize, use it for --swfsize
+
+Now generate the hash
+
+$ openssl sha -sha256 -hmac "Genuine Adobe Flash Player 001" file.swf
+
+and use the --swfhash "01234..." option to pass it.
+
+e.g. $ ./rtmpdump --swfhash "123456..." --swfsize 987.
