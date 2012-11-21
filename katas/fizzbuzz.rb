@@ -38,9 +38,11 @@ class Solutions
     end
   end
 end
-if ARGV.empty?
-  puts "usage: ruby solutions.rb [solution name]"
-  puts "available names are: #{Solutions.solutions.join(", ")}"
-else
-  Solutions.run ARGV[0]
+if __FILE__ == $0
+  if ARGV.empty?
+    puts "usage: ruby solutions.rb [solution name]"
+    puts "available names are: #{Solutions.solutions.join(", ")}"
+  else
+    Solutions.run ARGV[0]
+  end
 end
