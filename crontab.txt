@@ -1,3 +1,7 @@
+# MAILTO="user@domain.tld"
+# PATH=/usr/local/bin:/usr/bin:/usr/sbin:.
+# SHELL=/bin/bash
+# HOME=/Users/bfleischer
 # *     *     *   *    *        command to be executed
 # -     -     -   -    -
 # |     |     |   |    |
@@ -17,3 +21,4 @@
 # au FileType crontab set nobackup nowritebackup
 # Users who desire to have their .profile executed must explicitly do so in the crontab entry or in a script called by the entry.
 */15 9-17 * * 1-5 say "time to stretch"
+2 9 * * * /bin/bash -l -c 'source "$HOME/.rvm/scripts/rvm" && rvm use default && cd $HOME/path && $HOME/path/run.sh'
