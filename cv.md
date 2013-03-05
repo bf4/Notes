@@ -1,6 +1,6 @@
     Benjamin Fleischer
     Chicago, IL, United States
-    bf@benjaminfleischer.com
+    bf this domain
     http://benjaminfleischer.com
 
 
