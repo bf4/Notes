@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+
+# Exit if any subcommand fails
+set -e
+
+# Set up Ruby dependencies via Bundler
+command -v bundle > /dev/null || gem install bundler
+bundle check || bundle install
