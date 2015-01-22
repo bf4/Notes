@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+bootstrap = Module.new do
+  APP_ROOT = File.expand_path("../..", __FILE__)
+  module_function
+
+  def repo_root
+    APP_ROOT
+  end
+
+  def bundle
+    sh %{bundle check || bundle || bundle update}
+  end
+
+  def sh(cmd)
+    puts cmd
+    print `#{cmd}`
+    puts "\t #{$?.inspect}"
+  end
+end
+bootstrap.bundle

@@ -1,0 +1,17 @@
+require "bundler/gem_tasks"
+require "rake"
+require "dotenv"
+env_files = %w[.env]
+Dotenv.load(*env_files)
+pwd = File.expand_path("..", __FILE__)
+# Any default tasks are removed
+Rake::Task[:default].clear if Rake::Task.task_defined?(:default)
+Dir[File.join(pwd, "tasks/*.rake")].each do |rake_file|
+  load rake_file
+end
+
+if Rake::Task.task_defined?(:rubocop)
+  task default: [:spec, :rubocop]
+else
+  task default: [:spec]
+end
